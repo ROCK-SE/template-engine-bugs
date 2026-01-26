@@ -1,0 +1,5 @@
+{% if nutritional.calories is defined %}
+{{ nutritional.calories|round|int }
+{% else %}
+no value for nutritional.calories
+{% endif %}

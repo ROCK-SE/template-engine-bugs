@@ -1,0 +1,1 @@
+{% if ({{item.NODE}} == "ha2(VRM02)" and {{item.ROLE}} == "active") or ({{item.NODE}} == "ha1(VRM01)" and {{item.ROLE}} == "standby") %}Ok{% else %}Failed{% endif %}

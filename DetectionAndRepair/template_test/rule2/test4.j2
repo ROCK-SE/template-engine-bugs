@@ -1,0 +1,16 @@
+{# Initialise myList with some values 
+{% set myList = [1,5,3,4,2] %}
+{# add 5 to myList #} 
+{% append 5 to myList %}
+{# remove the second item from the list #} 
+{% set temp = myList.pop(1) %}
+{# find the index of the number 2 in myList #}
+{% set myIndex = myList.index(2) %}
+{# pop the number two from myList #} 
+{% set temp = myList.pop(myIndex) %}
+{# output the list and index of 1 #} 
+{{ "values in my list:"}}
+{{ myList }}
+{% set indexOne = myList.index(1) %} 
+{{ "</br> index of the number one:" }}
+{{ indexOne }}
