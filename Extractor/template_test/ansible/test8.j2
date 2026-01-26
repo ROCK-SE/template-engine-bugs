@@ -1,0 +1,9 @@
+# Source - https://stackoverflow.com/a
+# Posted by Vladimir Botka
+# Retrieved 2026-01-22, License - CC BY-SA 4.0
+
+    - debug:
+        msg: "{{ item }}"
+      loop: "{{ results1|subelements('children.attachment.results') }}"
+      loop_control:
+        label: "{{ item.0.keys()|first }}"

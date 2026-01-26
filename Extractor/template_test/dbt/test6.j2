@@ -1,0 +1,8 @@
+{% macro log_results(results, schemas) %}
+  {% if execute %}
+    {% set schema = schemas[0] %}
+    {% for res in results %}
+      INSERT INTO {{ schema }}__audit._model_run SELECT '{{ res.node.name }}', {{ res.execution_time }};
+    {% endfor %}
+  {% endif %}
+{% endmacro %}

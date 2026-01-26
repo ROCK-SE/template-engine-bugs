@@ -1,0 +1,12 @@
+{% for record in precord | default([], true) %}
+  <tr> 
+    <td colspan="1">{{ record.date }}</td>
+    <td colspan="2">{{ record.tasknote }}</td>
+  </tr>
+{% else %}
+  <tr>
+    <td colspan="3">
+      <center>No previous contacts. Get working!</center>
+    </td>
+  </tr>
+{% endfor %}

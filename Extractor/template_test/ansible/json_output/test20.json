@@ -1,0 +1,25 @@
+{
+    "variables": {
+        "people_full_names": {},
+        "item": {
+            "property": {
+                "first_name": {},
+                "last_name": {}
+            }
+        },
+        "full_name": {},
+        "people_names": {}
+    },
+    "tag": {},
+    "filter": {
+        "default": {
+            "is_builtin": true,
+            "signature": "default(value, default_value='', boolean=False)",
+            "description": "Return a default value if the original value is undefined.",
+            "caveat": "If boolean=True, only False triggers the default (not 0 or empty strings)."
+        },
+        "combine": {
+            "is_builtin": false
+        }
+    }
+}

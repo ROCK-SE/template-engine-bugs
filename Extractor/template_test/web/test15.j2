@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %}Test{% endblock %}
+{% block content %}
+<div class="container pt-5">
+      <h1 align="center">TEST PAGE</h1>
+</div>
+{% for dict_item in countries %}
+    {% for key,value in dict_item.items %}
+        <h1>Key: {{ key }}</h1>
+        <h2>Value: {{ value }}</h2>
+    {% endfor %}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,42 @@
+{
+    "variables": {
+        "interfaces": {
+            "type": "Iterable",
+            "property": {
+                "name": {},
+                "interface": {
+                    "property": {
+                        "ipv4": {
+                            "property": {
+                                "keys": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "hostname": {},
+        "loop": {
+            "property": {
+                "last": {}
+            }
+        }
+    },
+    "tag": {
+        "for": {
+            "node_type": "For",
+            "is_builtin": true,
+            "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+            "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+            "caveat": "Loop variables are only available inside the loop body."
+        }
+    },
+    "filter": {
+        "list": {
+            "is_builtin": true,
+            "signature": "list(value)",
+            "description": "Convert a value into a list.",
+            "caveat": "Strings are split into individual characters."
+        }
+    }
+}

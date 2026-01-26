@@ -1,0 +1,24 @@
+# Source - https://stackoverflow.com/a
+# Posted by Vladimir Botka, modified by community. See post 'Timeline' for change history
+# Retrieved 2026-01-22, License - CC BY-SA 4.0
+
+- hosts: localhost
+
+  vars:
+
+    my_list: [a, c]
+    my_dict:
+      a: 1
+      b: 2
+      c: 3
+    actual1: "{{ my_list|map('extract', my_dict)|list }}"
+    actual2: "{{ my_dict|dict2items|
+                         selectattr('key', 'in', my_list)|
+                         map(attribute='value')|list }}"
+
+  tasks:
+
+    - debug:
+        var: actual1|to_yaml
+    - debug:
+        var: actual2|to_yaml

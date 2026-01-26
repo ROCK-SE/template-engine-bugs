@@ -1,0 +1,20 @@
+# Source - https://stackoverflow.com/a
+# Posted by β.εηοιτ.βε, modified by community. See post 'Timeline' for change history
+# Retrieved 2026-01-22, License - CC BY-SA 4.0
+
+- hosts: all
+  gather_facts: no
+
+  tasks:
+    - debug:
+        msg: |
+          #jinja2: trim_blocks:False
+          array (
+            {%- for key, value in dict.items() if dict is defined %}
+            '{{ key }}' => {{ value }},
+            {%- endfor %}
+          ),
+      vars:
+        dict: 
+          lorem: ipsum
+          dolor: sit

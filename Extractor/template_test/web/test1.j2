@@ -1,0 +1,8 @@
+{% for role in project.role_set.all %}
+<h5> {{ role.role_name }} </h5>
+<ul>
+    {% for person in role.person_set.all %}
+        <li> {{ person.name }} </li>
+    {% endfor %}
+</ul>
+{% endfor %}

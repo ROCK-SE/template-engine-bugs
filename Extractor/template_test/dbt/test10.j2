@@ -1,0 +1,7 @@
+{% for item in db_server %}
+{% if item.name in fqdn.stdout and item.mysql == "mysql_5_5_28" %}
+"mysql-5.5.28-linux2.6-x86_64"
+{% elif item.name in fqdn.stdout and item.mysql == "mysql_5_1_51" %}
+"mysql-5.1.51-linux-x86_64-glibc23"
+{% endif %}
+{% endfor %}

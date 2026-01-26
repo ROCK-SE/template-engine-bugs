@@ -1,0 +1,15 @@
+{
+    "variables": {
+        "player": {
+            "property": {
+                "description": {}
+            }
+        }
+    },
+    "tag": {},
+    "filter": {
+        "linebreaks": {
+            "is_builtin": false
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<header id="header"
+    class='{% if nav_style == "Light Version" %} full-header {% endif %} 
+        {% if nav_style == "Dark Version" %} full-header dark {% endif %} 
+        {% if nav_style == "Transparent" %} transparent-header dark {% endif %} 
+        {% if nav_style == "Semi Transparent Light Version" %} full-header transparent-header semi-transparent {% endif %} 
+        {% if nav_style == "Semi Transparent Dark Version" %} full-header transparent-header semi-transparent dark {% endif %} 
+        {% if nav_style == "Floating Version" %} full-header transparent-header floating-header {% endif %} 
+        {% if nav_style == "Static Sticky "%} full-header {% endif %} 
+        {% if nav_style == "Responsive Sticky" %} full-header {% endif %}'
+    {% if nav_style=="Static Sticky" %}data-sticky-shrink="false" {% endif %} 
+    {% if nav_style=="Responsive Sticky" %}data-mobile-sticky="true" {% endif %}>

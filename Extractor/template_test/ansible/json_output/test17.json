@@ -1,0 +1,45 @@
+{
+    "variables": {
+        "_vlans": {},
+        "start": {},
+        "stop": {},
+        "i": {
+            "property": {
+                "TRUNKING_VLANS": {},
+                "INTERFACE": {}
+            }
+        },
+        "item": {},
+        "vlan_exp": {}
+    },
+    "tag": {},
+    "filter": {
+        "list": {
+            "is_builtin": true,
+            "signature": "list(value)",
+            "description": "Convert a value into a list.",
+            "caveat": "Strings are split into individual characters."
+        },
+        "int": {
+            "is_builtin": true,
+            "signature": "int(value, default=0, base=10)",
+            "description": "Convert a value to an integer.",
+            "caveat": "Floats are truncated, not rounded."
+        },
+        "first": {
+            "is_builtin": true,
+            "signature": "first(seq)",
+            "description": "Return the first item of a sequence.",
+            "caveat": "Returns undefined for empty sequences."
+        },
+        "last": {
+            "is_builtin": true,
+            "signature": "last(seq)",
+            "description": "Return the last item of a sequence.",
+            "caveat": "May be inefficient for large iterators."
+        },
+        "d": {
+            "is_builtin": true
+        }
+    }
+}

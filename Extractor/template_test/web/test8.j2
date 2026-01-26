@@ -1,0 +1,19 @@
+<table>
+  <tbodby>
+    {% for drink in drinks %}
+    <tr>
+      <td>{{ drink.idDrink }}</td>
+      <td>{{ drink.strDrink }}</td>
+      <td>{{ drink.strCategory }}</td>
+      <td>{{ drink.strGlass }}</td>
+      <td>{{ drink.strInstructions }}</td>
+      
+      {%- for drink_attribute, ingredient in drink.items() 
+            if drink_attribute.startswith('strIngredient') and ingredient 
+      %}
+        <td>{{ ingredient }}</td>
+      {%- endfor %}
+    </tr>
+    {% endfor %}
+  <tbody>
+</table>

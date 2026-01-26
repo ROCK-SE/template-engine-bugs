@@ -1,0 +1,6 @@
+- name: Print the ip address
+  debug:
+    msg: "{{ my_ifc.ipv4.address|default('Undefined') }}"
+  loop: "{{ ansible_interfaces|reject('search', 'lo')|list|sort }}"
+  vars:
+    my_ifc: "{{ lookup('vars', 'ansible_' ~ item) }}"

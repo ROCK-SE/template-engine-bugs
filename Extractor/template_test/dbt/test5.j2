@@ -1,0 +1,17 @@
+{% macro quoted(s) %}
+'{{ s }}'
+{% endmacro %}
+
+{# `s` was not extracted because it is a parameter of a macro, 
+which is a "local variable" rather than a "global variable" that needs to be passed in from outside (the Python backend). #}
+
+{% macro generate_list_select_from(seeding_query) %}
+    {# ... other code to execute my seeding query ... #}
+
+    {# loop query goes here  #}
+    {% for i in results_list %}
+      {% set args = [i[0], i[1], quoted(i[2])] %}
+      my_udf({{ args | join(", ")}}){% if not loop.last %},{% endif %}
+    {% endfor %}
+
+{% endmacro %}

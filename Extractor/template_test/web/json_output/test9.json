@@ -1,0 +1,21 @@
+{
+    "variables": {
+        "spend": {},
+        "user": {
+            "caveat": "Variable name 'user' conflicts with a Python built-in module.",
+            "is_conflicting_with_builtin_module": true
+        }
+    },
+    "tag": {},
+    "filter": {
+        "round": {
+            "is_builtin": false
+        },
+        "float": {
+            "is_builtin": true,
+            "signature": "float(value, default=0.0)",
+            "description": "Convert a value to a floating-point number.",
+            "caveat": "Invalid values return the default."
+        }
+    }
+}

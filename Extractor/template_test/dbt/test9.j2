@@ -1,0 +1,5 @@
+{% macro extract_clean_tag(tag_regex) %}
+
+    COALESCE(LOWER(tags::TEXT) ~ '.*{{ tag_regex }}.*', FALSE)
+
+{% endmacro %}

@@ -1,0 +1,15 @@
+{%- macro dump_dict(d) -%}
+    <ul>
+    {% for key, value in d.items() %}
+        <li>{{ key }}
+        {% if value.children %}
+            {% for child in value.children -%}
+                {{ dump_dict(child) }}
+            {%- endfor %}
+        {% endif -%}
+        </li>
+    {%- endfor -%}
+    </ul>
+{%- endmacro %}
+
+{{ dump_dict(data.data) }}

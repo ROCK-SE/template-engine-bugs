@@ -1,0 +1,13 @@
+- name: add lines to file
+  blockinfile:
+    path: myoutfile
+    block: |
+      {% for host in ansible_play_batch %}
+      {% for sname in myservices %}
+      {% set service = sname | lower ~ '_state' %}
+      {% if hostvars[host][service] is defined and hostvars[host][service] %}
+      {{ host }}: {{ service }}: {{ hostvars[host][service] }}
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+  delegate_to: localhost

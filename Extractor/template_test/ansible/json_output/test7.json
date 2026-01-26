@@ -1,0 +1,28 @@
+{
+    "variables": {
+        "found_route_list": {
+            "type": "Iterable",
+            "property": {
+                "line": {}
+            }
+        },
+        "blah": {}
+    },
+    "tag": {
+        "set": {
+            "node_type": "Assign",
+            "is_builtin": true,
+            "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+            "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+            "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+        },
+        "for": {
+            "node_type": "For",
+            "is_builtin": true,
+            "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+            "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+            "caveat": "Loop variables are only available inside the loop body."
+        }
+    },
+    "filter": {}
+}

@@ -1,0 +1,16 @@
+# Source - https://stackoverflow.com/a
+# Posted by Zeitounator, modified by community. See post 'Timeline' for change history
+# Retrieved 2026-01-22, License - CC BY-SA 4.0
+
+- name: Create my application names list
+  vars:
+    current_name: "{{ item.0 }}.{{ item.1 }}"
+  set_fact:
+    application_names_list: "{{ application_names_list | default([]) + [current_name] }}"
+  loop: "{{ customers | map(attribute='name') | product(domain_names) | list }}"
+
+- name: Check which certificates exist
+  stat:
+    path: '/etc/nginx/{{ item }}.crt'
+  register: cert_file
+  loop: "{{ application_names_list }}"

@@ -1,0 +1,29 @@
+{
+    "variables": {
+        "results": {}
+    },
+    "tag": {
+        "macro": {
+            "node_type": "Macro",
+            "is_builtin": true,
+            "syntax": "{% macro name(args, kwargs=default) %}...{% endmacro %}",
+            "description": "Define a reusable template function that can accept arguments and return rendered output.",
+            "caveat": "Macros perform no type checking. Variables defined inside a macro are local. Recursive macros may cause stack overflows."
+        },
+        "call": {
+            "node_type": "CallBlock",
+            "is_builtin": true,
+            "syntax": "{% call(args) macro_name() %}...{% endcall %}",
+            "description": "Invoke a macro and pass a block of template content as a callable via the special caller() function.",
+            "caveat": "The macro must explicitly call caller() to render the block. Call blocks introduce additional rendering overhead."
+        },
+        "set": {
+            "node_type": "Assign",
+            "is_builtin": true,
+            "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+            "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+            "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+        }
+    },
+    "filter": {}
+}

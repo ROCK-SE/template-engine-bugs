@@ -1,0 +1,18 @@
+{
+    "variables": {
+        "item": {},
+        "results1": {}
+    },
+    "tag": {},
+    "filter": {
+        "subelements": {
+            "is_builtin": false
+        },
+        "first": {
+            "is_builtin": true,
+            "signature": "first(seq)",
+            "description": "Return the first item of a sequence.",
+            "caveat": "Returns undefined for empty sequences."
+        }
+    }
+}

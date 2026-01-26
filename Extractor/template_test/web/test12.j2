@@ -1,0 +1,12 @@
+{% for content in contents %}
+   <div>
+       *some divs here*
+       {{content}}
+   </div>
+
+{% if content.index == 3 %}
+   <div>
+        *some contents inside*
+   </div>
+{% endif %}
+{% endfor %}

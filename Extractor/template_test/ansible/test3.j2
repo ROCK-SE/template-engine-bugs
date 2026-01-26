@@ -1,0 +1,17 @@
+{% for result in server_port_check.results | select("failed") %}
+  {%- if loop.first -%}
+    The following ports are not open:
+  {%- endif %}
+
+Host:   {{ result.item.name }}
+Port:   {{ result.item.port }}
+{% endfor %}
+
+{% for result in server_port_check.results | select("success") %}
+  {%- if loop.first -%}
+    The following ports are open:
+  {%- endif %}
+
+Host:   {{ result.item.name }}
+Port:   {{ result.item.port }}
+{% endfor %}

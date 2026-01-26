@@ -1,0 +1,27 @@
+# Source - https://stackoverflow.com/a
+# Posted by Vladimir Botka, modified by community. See post 'Timeline' for change history
+# Retrieved 2026-01-22, License - CC BY-SA 4.0
+
+- hosts: localhost
+
+  vars:
+
+    node_taint:
+      - node-role.0
+      - node-role.1
+      - node-role.2
+
+  tasks:
+
+    - debug:
+        var: node_taint
+
+    - debug:
+        msg: |
+          node_taint:
+            {{ node_taint | to_yaml | indent(2) }}
+
+    - debug:
+        msg: |
+          node_taint:
+            {{ node_taint | to_nice_yaml | indent(2) }}

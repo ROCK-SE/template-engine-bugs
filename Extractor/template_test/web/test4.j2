@@ -1,0 +1,8 @@
+{% set earnings = (
+     details.sections | selectattr('name', 'eq', 'Earnings') | first
+   ).details | sum(attribute='value')
+%}
+{% set deductions = (
+     details.sections | selectattr('name', 'eq', 'Deductions') | first
+   ).details | sum(attribute='value')
+%}

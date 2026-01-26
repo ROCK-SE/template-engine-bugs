@@ -1,0 +1,18 @@
+{
+    "variables": {
+        "random": {
+            "caveat": "Variable name 'random' conflicts with a Python built-in module.",
+            "is_conflicting_with_builtin_module": true
+        }
+    },
+    "tag": {
+        "block": {
+            "node_type": "Block",
+            "is_builtin": true,
+            "syntax": "{% block name scoped %}...{% endblock %}",
+            "description": "Define a named block that can be overridden by child templates during template inheritance.",
+            "caveat": "Block names must be unique within a template."
+        }
+    },
+    "filter": {}
+}

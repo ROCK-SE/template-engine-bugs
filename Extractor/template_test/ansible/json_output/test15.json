@@ -1,0 +1,33 @@
+{
+    "variables": {
+        "item": {},
+        "application_names_list": {},
+        "current_name": {},
+        "customers": {},
+        "domain_names": {}
+    },
+    "tag": {},
+    "filter": {
+        "default": {
+            "is_builtin": true,
+            "signature": "default(value, default_value='', boolean=False)",
+            "description": "Return a default value if the original value is undefined.",
+            "caveat": "If boolean=True, only False triggers the default (not 0 or empty strings)."
+        },
+        "list": {
+            "is_builtin": true,
+            "signature": "list(value)",
+            "description": "Convert a value into a list.",
+            "caveat": "Strings are split into individual characters."
+        },
+        "product": {
+            "is_builtin": false
+        },
+        "map": {
+            "is_builtin": true,
+            "signature": "map(value, attribute)",
+            "description": "Apply a filter or extract an attribute from each item.",
+            "caveat": "Missing attributes yield undefined."
+        }
+    }
+}

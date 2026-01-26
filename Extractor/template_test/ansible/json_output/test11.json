@@ -1,0 +1,30 @@
+{
+    "variables": {
+        "my_list": {},
+        "my_dict": {}
+    },
+    "tag": {},
+    "filter": {
+        "list": {
+            "is_builtin": true,
+            "signature": "list(value)",
+            "description": "Convert a value into a list.",
+            "caveat": "Strings are split into individual characters."
+        },
+        "map": {
+            "is_builtin": true,
+            "signature": "map(value, attribute)",
+            "description": "Apply a filter or extract an attribute from each item.",
+            "caveat": "Missing attributes yield undefined."
+        },
+        "selectattr": {
+            "is_builtin": true,
+            "signature": "selectattr(value, attr, test)",
+            "description": "Filter objects by attribute value.",
+            "caveat": "Objects without the attribute are skipped."
+        },
+        "dict2items": {
+            "is_builtin": false
+        }
+    }
+}

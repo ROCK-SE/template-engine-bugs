@@ -1,0 +1,13 @@
+{% set pivot_cols = dbt_utils.get_column_values(table=ref('my_base_model'), column='KEY') %}
+
+with pivot as (
+    select * 
+    from {{ ref('my_base_model') }}
+        pivot( sum(VALUE) for KEY in (
+            {% for pivot_col in pivot_cols %}
+                '{{pivot_col}}'{% if not loop.last %}, {% endif%}
+            {% endfor %}
+         ))
+)
+
+select * from pivot

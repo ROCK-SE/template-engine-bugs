@@ -1,0 +1,25 @@
+{
+    "variables": {
+        "record": {
+            "property": {
+                "SCHEMA_NAME": {},
+                "TABLE_NAME": {}
+            }
+        }
+    },
+    "tag": {},
+    "filter": {
+        "lower": {
+            "is_builtin": true,
+            "signature": "lower(s)",
+            "description": "Convert a string to lowercase.",
+            "caveat": "Only applicable to strings."
+        },
+        "string": {
+            "is_builtin": true,
+            "signature": "string(value)",
+            "description": "Convert a value to a string.",
+            "caveat": "None is converted to an empty string."
+        }
+    }
+}

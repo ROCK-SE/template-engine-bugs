@@ -1,0 +1,20 @@
+{
+    "variables": {},
+    "tag": {
+        "extends": {
+            "node_type": "Extends",
+            "is_builtin": true,
+            "syntax": "{% extends template %}",
+            "description": "Declare template inheritance from a parent template. The child template may override blocks defined by the parent.",
+            "caveat": "The extends tag must appear before any output, except whitespace or comments."
+        },
+        "block": {
+            "node_type": "Block",
+            "is_builtin": true,
+            "syntax": "{% block name scoped %}...{% endblock %}",
+            "description": "Define a named block that can be overridden by child templates during template inheritance.",
+            "caveat": "Block names must be unique within a template."
+        }
+    },
+    "filter": {}
+}

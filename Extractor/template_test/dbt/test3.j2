@@ -1,0 +1,16 @@
+{% macro my_fnc(prefix=None) %}
+        
+        {% if prefix is defined %}
+            {% set load_table = prefix ~ '_data_categories' %}
+        {% else %}
+            {% set load_table = 'data_categories' %}
+        {% endif %}
+    
+        {% set sql_statement %}
+            select *
+            from {{ ref( load_table  ) }}
+        {% endset %}
+        
+       ...
+
+{% endmacro %}

@@ -1,0 +1,20 @@
+{
+    "variables": {
+        "node_taint": {}
+    },
+    "tag": {},
+    "filter": {
+        "indent": {
+            "is_builtin": true,
+            "signature": "indent(s, width=4, first=False, blank=False)",
+            "description": "Indent each line in a multi-line string.",
+            "caveat": "Width may be an integer or a string."
+        },
+        "to_yaml": {
+            "is_builtin": false
+        },
+        "to_nice_yaml": {
+            "is_builtin": false
+        }
+    }
+}

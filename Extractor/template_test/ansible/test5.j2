@@ -1,0 +1,29 @@
+- name: main
+  hosts: all
+  gather_facts: no
+  become: true
+  tasks:
+  - setup:
+        gather_subset:
+         - '!all'
+
+  - name: Gather rpm packages
+    package_facts:
+          manager: auto
+    ignore_errors: true
+
+  - name: Create the result file
+    local_action:
+     module: copy
+     content: |
+          {% for h in groups.all %}
+          {{h}}; OS: {{hostvars[h]['ansible_distribution']|default('N/A')}}; Release: {{hostvars[h]['ansible_distribution_version']|default('N/A')}}
+
+          List of instaled packages:.......
+          #==============================================
+          {% for k, v in (hostvars[h].packages | default({})).items() %}
+          package {{ k.rjust(24) }}      version {{ v[0].version }}
+          {%endfor%}
+          #==============================================
+          {%endfor%}
+     dest: '/reports/OS_info.txt'

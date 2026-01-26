@@ -1,0 +1,10 @@
+{% for name, interface in interfaces.items() if interface.ipv4 is defined %}
+  {
+    "name": "{{ name }}",
+    "prefix": "{{ (interface.ipv4.keys() | list).0 }}",
+    "hostname": "{{ hostname }}"
+  }{{ ", " if not loop.last }}
+{% endfor %}
+
+
+

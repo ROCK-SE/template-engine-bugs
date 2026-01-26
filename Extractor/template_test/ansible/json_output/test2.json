@@ -1,0 +1,33 @@
+{
+    "variables": {
+        "bds_info": {},
+        "db_name": {}
+    },
+    "tag": {},
+    "filter": {
+        "join": {
+            "is_builtin": true,
+            "signature": "join(value, d='', attribute=None)",
+            "description": "Join items into a string using a delimiter.",
+            "caveat": "All items must be string-convertible."
+        },
+        "map": {
+            "is_builtin": true,
+            "signature": "map(value, attribute)",
+            "description": "Apply a filter or extract an attribute from each item.",
+            "caveat": "Missing attributes yield undefined."
+        },
+        "selectattr": {
+            "is_builtin": true,
+            "signature": "selectattr(value, attr, test)",
+            "description": "Filter objects by attribute value.",
+            "caveat": "Objects without the attribute are skipped."
+        },
+        "upper": {
+            "is_builtin": true,
+            "signature": "upper(s)",
+            "description": "Convert a string to uppercase.",
+            "caveat": "Only applicable to strings."
+        }
+    }
+}

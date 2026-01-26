@@ -1,0 +1,6 @@
+- debug:
+    msg: |-
+      {% for region, value in cluster_topology.regions.items() %}
+      echo {{ region }}
+      echo {{ value.ips }}
+      {% endfor %}

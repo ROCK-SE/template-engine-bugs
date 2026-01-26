@@ -1,0 +1,46 @@
+{
+    "variables": {
+        "project": {
+            "property": {
+                "role_set": {
+                    "property": {
+                        "all": {
+                            "type": "Iterable",
+                            "property": {
+                                "role": {
+                                    "property": {
+                                        "role_name": {},
+                                        "person_set": {
+                                            "property": {
+                                                "all": {
+                                                    "type": "Iterable",
+                                                    "property": {
+                                                        "person": {
+                                                            "property": {
+                                                                "name": {}
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tag": {
+        "for": {
+            "node_type": "For",
+            "is_builtin": true,
+            "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+            "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+            "caveat": "Loop variables are only available inside the loop body."
+        }
+    },
+    "filter": {}
+}

@@ -1,0 +1,12 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - copy:
+        dest: output.txt
+        content: |
+          {% for host in groups['production'] %}
+          # Host: {{ host }}
+          {% for url in lookup('file', host ~ '_websites.txt').splitlines() %}
+          - {{ url }}
+          {% endfor %}
+          {% endfor %}

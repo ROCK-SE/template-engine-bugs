@@ -1,0 +1,12 @@
+# Source - https://stackoverflow.com/q
+# Posted by Mike S, modified by community. See post 'Timeline' for change history
+# Retrieved 2026-01-22, License - CC BY-SA 4.0
+
+    - name: Populate appended route list
+      set_fact:
+        found_added_routes: |- 
+          {%- set blah = [] %}
+            {%- for line in found_route_list %}
+              {%- set _ = blah.append(line) %}
+            {%- endfor %} 
+          {{ blah }}

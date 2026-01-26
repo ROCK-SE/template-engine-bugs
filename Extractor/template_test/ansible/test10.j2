@@ -1,0 +1,24 @@
+# Source - https://stackoverflow.com/a
+# Posted by β.εηοιτ.βε, modified by community. See post 'Timeline' for change history
+# Retrieved 2026-01-22, License - CC BY-SA 4.0
+
+    - block:
+      - debug:
+          msg: >-
+            {% for osd in osd_spec %}
+            {{- (osd.data_devices | dict2items)[0].key -}}
+            {% endfor %}
+
+      - debug:
+          msg: >-
+            {% for osd in osd_spec %}
+            {{- osd.data_devices.keys() -}}
+            {% endfor %}
+
+      vars:
+        osd_spec:
+          - spec_name: osd_spec
+            data_devices:
+              paths:
+              - /dev/sdg
+              - /dev/sdh

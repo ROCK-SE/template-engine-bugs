@@ -1,0 +1,13 @@
+{
+    "variables": {},
+    "tag": {
+        "macro": {
+            "node_type": "Macro",
+            "is_builtin": true,
+            "syntax": "{% macro name(args, kwargs=default) %}...{% endmacro %}",
+            "description": "Define a reusable template function that can accept arguments and return rendered output.",
+            "caveat": "Macros perform no type checking. Variables defined inside a macro are local. Recursive macros may cause stack overflows."
+        }
+    },
+    "filter": {}
+}

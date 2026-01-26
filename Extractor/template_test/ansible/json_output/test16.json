@@ -1,0 +1,13 @@
+{
+    "variables": {
+        "username": {},
+        "offline": {},
+        "omit": {}
+    },
+    "tag": {},
+    "filter": {
+        "d": {
+            "is_builtin": true
+        }
+    }
+}

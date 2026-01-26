@@ -1,0 +1,11 @@
+<table>
+  {%- for postback in postbacks %}
+    {%- if loop.changed(postback.campaign_id) %}
+      <tr>
+        <td class="expand expand-site">
+          {{ postback.campaign_id }}
+        </td>
+      </tr>
+    {%- endif %}
+  {%- endfor %}
+</table>

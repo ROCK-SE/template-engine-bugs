@@ -1,0 +1,8 @@
+# Source - https://stackoverflow.com/a
+# Posted by Zeitounator
+# Retrieved 2026-01-22, License - CC BY-SA 4.0
+
+- vars:
+    reject_regex: "({{ grafana_alerts_exclusion_list | map('regex_escape') | join('|') }})$"
+  debug:
+    msg: "{{ alerts_output.json | rejectattr('name', 'regex', reject_regex) }}"

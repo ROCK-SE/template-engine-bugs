@@ -1,0 +1,3 @@
+{% if os.path.exists('./static/userdata/dummy.csv') %}
+     <a class="nav-item nav-link" href="{{ url_for('checkfraudstatus') }}">Check Fraud Status</a>
+{% endif %}

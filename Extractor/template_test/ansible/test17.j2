@@ -1,0 +1,11 @@
+- set_fact:
+    _vlans: []
+- set_fact:
+    _vlans: "{{ _vlans + range(start|int, stop|int + 1)|list }}"
+  loop: "{{ i.TRUNKING_VLANS.split(',') }}"
+  vars:
+    start: "{{ item.split('-')|first }}"
+    stop: "{{ item.split('-')|last }}"
+- set_fact:
+    vlan_exp: "{{ vlan_exp|d([]) + [{'INTERFACE': i.INTERFACE,
+                                     'TRUNKING_VLANS': _vlans}] }}"

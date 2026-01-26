@@ -1,0 +1,42 @@
+{
+    "variables": {
+        "details": {
+            "property": {
+                "sections": {
+                    "property": {
+                        "details": {}
+                    }
+                }
+            }
+        }
+    },
+    "tag": {
+        "set": {
+            "node_type": "Assign",
+            "is_builtin": true,
+            "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+            "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+            "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+        }
+    },
+    "filter": {
+        "sum": {
+            "is_builtin": true,
+            "signature": "sum(iterable, attribute=None, start=0)",
+            "description": "Sum numeric values in an iterable.",
+            "caveat": "All values must be numeric; floating-point precision applies."
+        },
+        "first": {
+            "is_builtin": true,
+            "signature": "first(seq)",
+            "description": "Return the first item of a sequence.",
+            "caveat": "Returns undefined for empty sequences."
+        },
+        "selectattr": {
+            "is_builtin": true,
+            "signature": "selectattr(value, attr, test)",
+            "description": "Filter objects by attribute value.",
+            "caveat": "Objects without the attribute are skipped."
+        }
+    }
+}

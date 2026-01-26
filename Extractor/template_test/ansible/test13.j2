@@ -1,0 +1,22 @@
+# Source - https://stackoverflow.com/a
+# Posted by Vladimir Botka, modified by community. See post 'Timeline' for change history
+# Retrieved 2026-01-22, License - CC BY-SA 4.0
+
+- hosts: localhost
+  vars:
+    somevar: someval
+    var_list: |
+      {% if somevar == 'someval' %}
+      - host1
+      - host2
+      - host3
+      - host4
+      {% elif somevar == 'differentval' %}
+      - host5
+      - host6
+      {% endif %}
+  tasks:
+    - debug:
+        var: var_list
+    - debug:
+        msg: "{{ var_list|type_debug }}"

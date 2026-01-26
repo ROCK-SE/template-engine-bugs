@@ -1,0 +1,42 @@
+{
+    "variables": {
+        "my_ifc": {
+            "property": {
+                "ipv4": {
+                    "property": {
+                        "address": {}
+                    }
+                }
+            }
+        },
+        "ansible_interfaces": {},
+        "item": {}
+    },
+    "tag": {},
+    "filter": {
+        "default": {
+            "is_builtin": true,
+            "signature": "default(value, default_value='', boolean=False)",
+            "description": "Return a default value if the original value is undefined.",
+            "caveat": "If boolean=True, only False triggers the default (not 0 or empty strings)."
+        },
+        "sort": {
+            "is_builtin": true,
+            "signature": "sort(value, reverse=False, case_sensitive=False, attribute=None)",
+            "description": "Sort a sequence.",
+            "caveat": "Elements must be comparable; attribute must exist on objects."
+        },
+        "list": {
+            "is_builtin": true,
+            "signature": "list(value)",
+            "description": "Convert a value into a list.",
+            "caveat": "Strings are split into individual characters."
+        },
+        "reject": {
+            "is_builtin": true,
+            "signature": "reject(value, test)",
+            "description": "Filter items that fail a test.",
+            "caveat": "Opposite behavior of select."
+        }
+    }
+}

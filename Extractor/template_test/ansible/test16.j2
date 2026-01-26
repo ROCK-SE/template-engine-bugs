@@ -1,0 +1,11 @@
+shell> cat pb.yml
+- hosts: localhost
+
+  vars:
+
+    url_username: "{{ username | d(offline | d(omit)) }}"
+
+  tasks:
+
+    - debug:
+        var: url_username

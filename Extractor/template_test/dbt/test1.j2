@@ -1,0 +1,9 @@
+{%- set payment_methods = dbt_utils.get_column_values(
+    table=ref('customer_orders_model'),
+    column='jsonData'
+) -%}
+
+{% for json in payment_methods %}
+{% set my_dict = fromjson(json) %}
+
+{% endfor %}

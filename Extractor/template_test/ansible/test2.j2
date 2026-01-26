@@ -1,0 +1,8 @@
+- debug:
+    msg: >-
+      {{
+        bds_info
+          | selectattr('id', 'equalto', db_name | upper)
+          | map(attribute='scan_name', default='undefined')
+          | join
+      }}

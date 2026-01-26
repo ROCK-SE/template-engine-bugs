@@ -1,0 +1,20 @@
+{
+    "variables": {
+        "somevar": {},
+        "var_list": {}
+    },
+    "tag": {
+        "if": {
+            "node_type": "If",
+            "is_builtin": true,
+            "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+            "description": "Conditionally render blocks based on the truth value of expressions.",
+            "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+        }
+    },
+    "filter": {
+        "type_debug": {
+            "is_builtin": false
+        }
+    }
+}
