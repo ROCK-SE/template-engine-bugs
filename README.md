@@ -9,7 +9,7 @@ DetectionAndRepair/
 > - template_test/: Directory for test template files (place templates to be detected here)
 
 ## Variable and Control Structure Extractor for Jinja Templates
-
+### Folder Structure
 Extractor/
 > - analyzer.py: Core analysis entry (parses AST, invokes extractors)
 > - variable_extractor.py: Extract variables model from Jinja2 AST
