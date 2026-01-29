@@ -1,12 +1,12 @@
 # Root Causes in Template Engine Application Bugs
 
-## Syntax Misuse (358/1004)
+## Syntax Misuse (359/1004)
 This category captures bugs caused by violations of grammatical rules or syntactic conventions defined by the template engine. 
 - **Expression Misuse (197):** This category refers to invalid logic or syntax within expression constructs. It arises when developers employ unsupported expression forms, illegal nesting syntax, or perform incompatible operations on variables.
   - `(e.g., "because you are comparing objects, not strings") (Handlebars.js, Post #75788011)`
   - `(e.g., "Thymeleaf does not support the use of expressions for evaluating URL fragments") (Thymeleaf, Post #69276002)`
   - `(e.g., "You cannot compare asset_class with string") (Django-Template, Post #69039116)`
-- **Control Structure Misuse (107):** This category involves violations of the usage specifications for control structures, particularly regarding the incorrect use of tags and filters.
+- **Control Structure Misuse (108):** This category involves violations of the usage specifications for control structures, particularly regarding the incorrect use of tags and filters.
   - `(e.g., "cannot put the extends template tag in an if-else") (Jinja, Post #67490509)`
   - `(e.g., "Where filter allows only to compare a key value with another value.") (Liquid, Post #60424383).`
 - **Delimiter Misuse (54):** This category refers to confusion regarding the distinct purposes of various delimiters, leading to incorrect usage or violations of delimiter syntax rules. It involves issues such as unclosed tags, misspelled delimiters, or improper delimiter nesting.
@@ -52,7 +52,7 @@ This category captures bugs caused by violations of grammatical rules or syntact
   - `(e.g., "the character encoding used by your system’s console cannot handle the Persian characters") (Django-Template, Post #75737504)`
 
 ## Mechanisms Misunderstanding (81/1004)
-- **Language Conventions (45): **This category refers to violations of the engine parsing logic resulting from incorrect judgment.
+- **Language Conventions (45):** This category refers to violations of the engine parsing logic resulting from incorrect judgment.
   - `(e.g., "The index has higher precedence compared to the filter") (Jinja, Post #62368279)`
   - `(e.g., "Blade’s compiler will not catch the @error directive inside the mustaches") (Blade, Post #71191222)`
 - **Rendering Misunderstanding (36):** This category encompasses failures stemming from unfamiliarity with the engine’s internal principles, resulting in a divergence between expected and actual runtime behaviors
