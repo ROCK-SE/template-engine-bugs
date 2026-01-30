@@ -1,5 +1,5 @@
 # Template-Engine-Bugs
-## Syntax Error Detection and Repair Tool for Jinja Templates
+## Jinja Syntax Error Detection and Repair Tool
 ### Folder Structure
 **DetectionAndRepair/**
 > - **fixer.py:** Core logic for error auto-repair (paired with detectors)
@@ -8,7 +8,7 @@
 > - **models.py:** Data models (definitions for SyntaxError, State classes)
 > - **template_test/:** Directory for test template files (place templates to be detected here)
 
-## Variable and Control Structure Extractor for Jinja Templates
+## Jinja Template Element Extractor
 ### Folder Structure
 **Extractor/**
 > - **analyzer.py:** Core analysis entry (parses AST, invokes extractors)
