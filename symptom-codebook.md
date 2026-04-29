@@ -26,7 +26,7 @@ This category refers to data-flow failures arising from discrepancies between th
 - **Type Mismatch(48):** The data type of the passed value is incompatible with the operations required by the template.
   - `(e.g., "datetime.date object is not iterable") (Django-Template, Post#77934119)`
 
-## Abnormal Rendering Results (465/1004)
+## Abnormal Rendering Results (488/1004)
 This category contains bug arised when the template engine renders the template to final output.
 - **Unexpected Output (267):** The renderred output is not blank, but does not meet the developer's expectations.
   - `(e.g., "The output of this is foo while the expected output is bar") (Liquid, Post #68623329)`
@@ -38,6 +38,8 @@ This category contains bug arised when the template engine renders the template 
 - **Broken HTML Elements (9):** This category describes structural or functional defects observed in the generated DOM elements. It includes cases where UI components fail to render, appear as raw object representations, or lose their interactive functionality.
   - `(e.g., "but then when I return a new view of the page, divs with my checkboxes do not appear") (Thymeleaf, Post #66610802)` 
   - `(e.g., "pagination buttons... don’t work or go anywhere") (Twig,Post #76181742)`
+ 
+- **Failed URL Routing (23):** When integrated with Web frameworks, template engines utilize dynamic abstractions (e.g., {% url %} in Django-Template) rather than hardcoded paths to resolve links via logical names. This mechanism allows the host environment to manage URL patterns independently of the presentation layer (i.e., templates). However, it establishes an implicit contract between templates and the framework’s routing table: any mismatch in logical names or required parameters triggers Failed URL Routing bugs, which typically manifest as HTTP errors (e.g., 404) or framework-specific runtime exceptions (e.g., NoReverseMatch in Django).
 
-## Others (43/1004)
-This category comprises atypical bugs that cannot be classified into any other specific symptom. It includes issues such as URL reverse routing failures and 404 errors. `(e.g., "Reverse for ’section’ with arguments ’(",)’ not found") (Django-Template, Post #68303980)`.
+## Others (20/1004)
+This category comprises atypical bugs that cannot be classified into any other specific symptom.
