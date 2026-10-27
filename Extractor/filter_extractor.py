@@ -1,39 +1,22 @@
-from jinja2 import nodes
-from metadata.filter_defs import (
-    JINJA2_BUILTIN_FILTERS_INFO,
-    BUILTIN_FILTER_NAMES,
-)
+from jinja2 import Environment, nodes
 
-def extract_filters(parsed_ast):
-    """
-    Extract filters used in the Jinja2 template from the parsed AST
-    Args:
-        parsed_ast: Parsed AST of the Jinja2 template
-    Returns:
-        dict: Extracted filters with details
-    """
+from .metadata.filter_defs import JINJA2_BUILTIN_FILTERS_INFO
+from .source_elements import source_elements
+
+
+def extract_filters(parsed_ast, source=None, environment=None):
+    """Report explicit filters, including blocks, without extension-generated ones."""
+    if source is not None:
+        names = source_elements(source, environment or getattr(parsed_ast, "environment", None))[1]
+    else:
+        candidates = ([parsed_ast] if isinstance(parsed_ast, nodes.Filter) else [])
+        candidates.extend(parsed_ast.find_all(nodes.Filter))
+        names = dict.fromkeys(node.name for node in candidates)
+    builtin_names = Environment().filters
     filters = {}
-
-    def walk(node):
-        if isinstance(node, nodes.Filter):
-            name = node.name
-            if name not in filters:
-                entry = {
-                    "is_builtin": name in BUILTIN_FILTER_NAMES,
-                }
-                # Add built-in filter details if available
-                if name in JINJA2_BUILTIN_FILTERS_INFO:
-                    entry.update(JINJA2_BUILTIN_FILTERS_INFO[name])
-                filters[name] = entry
-
-        # Recursively process child nodes
-        for _, child in node.iter_fields():
-            if isinstance(child, list):
-                for c in child:
-                    if isinstance(c, nodes.Node):
-                        walk(c)
-            elif isinstance(child, nodes.Node):
-                walk(child)
-
-    walk(parsed_ast)
+    for name in names:
+        entry = {"is_builtin": name in builtin_names}
+        if name in JINJA2_BUILTIN_FILTERS_INFO:
+            entry.update(JINJA2_BUILTIN_FILTERS_INFO[name])
+        filters[name] = entry
     return filters

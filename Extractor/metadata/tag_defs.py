@@ -83,4 +83,24 @@ JINJA2_BUILTIN_TAGS_INFO = {
     }
 }
 
+JINJA2_BUILTIN_TAGS_INFO.update({
+    "trans": {
+        "syntax": "{% trans bindings %}...{% pluralize %}...{% endtrans %}",
+        "description": "Mark text for translation using Jinja's i18n extension.",
+        "extension": "jinja2.ext.i18n",
+        "caveat": "Source extraction preserves this tag after i18n AST lowering.",
+    },
+    "break": {
+        "syntax": "{% break %}",
+        "description": "Stop the current loop.",
+        "extension": "jinja2.ext.loopcontrols",
+    },
+    "continue": {
+        "syntax": "{% continue %}",
+        "description": "Continue with the next loop iteration.",
+        "extension": "jinja2.ext.loopcontrols",
+    },
+})
+
+# is_builtin denotes tags supplied by Jinja, including its bundled extensions.
 BUILTIN_TAG_NAMES = set(JINJA2_BUILTIN_TAGS_INFO.keys())
