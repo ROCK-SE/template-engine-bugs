@@ -1,7 +1,7 @@
 """Scope-aware, per-analysis inference of external input structures.
 
-The public schema retains property, __getitem__(), type=Iterable, and loop-target
-placeholders. A dynamic subscript uses a distinct __dynamic_getitem__() node.
+The public schema retains property, __getitem__(), type=Iterable, and used
+loop-target placeholders. A dynamic subscript uses a __dynamic_getitem__() node.
 No template expressions or application functions are executed.
 """
 from dataclasses import dataclass
@@ -16,6 +16,8 @@ class Binding:
     # A local declaration and definite assignment are separate facts.
     unbound: bool = False
     local: bool = True
+    # (collection origin, target name) pairs materialized only on a data read.
+    loop_targets: tuple = ()
 
 
 def _unique_origins(origins):
@@ -72,6 +74,7 @@ class VariableExtractor:
     def _name_origins(self, name):
         binding = self._lookup(name)
         origins = list(binding.origins)
+        origins.extend(_property(parent, target) for parent, target in binding.loop_targets)
         if binding.unbound and not binding.local and name not in self.runtime_globals:
             origins.append(self._root(name))
         return _unique_origins(origins)
@@ -152,7 +155,12 @@ class VariableExtractor:
             # contain data inputs; the same name read as data is not excluded.
             if isinstance(node.node, nodes.Getattr):
                 self.expression(node.node.node)
-            elif not isinstance(node.node, nodes.Name):
+            elif isinstance(node.node, nodes.Name):
+                # A locally-bound callable can consume a loop element without
+                # introducing an external function-name input.
+                if self._lookup(node.node.name).local:
+                    self._name_origins(node.node.name)
+            else:
                 self.expression(node.node)
             self._arguments(node)
         elif isinstance(node, (nodes.Filter, nodes.Test)):
@@ -220,7 +228,9 @@ class VariableExtractor:
         for origin in origins:
             origin["type"] = "Iterable"
         for name in _targets(node.target):
-            bindings[name] = Binding(tuple(_property(origin, name) for origin in origins))
+            # Keep unused targets out of the public property tree. Scope-aware
+            # name resolution materializes their element nodes when read.
+            bindings[name] = Binding(loop_targets=tuple((origin, name) for origin in origins))
         self.scopes.append(bindings)
         try:
             # The filter test can refer to its target and external arguments.
@@ -260,6 +270,7 @@ class VariableExtractor:
                 # A conditional local does not become an external data input
                 # merely because another branch leaves it unassigned.
                 local=any(value.local for value in values),
+                loop_targets=_unique_origins(target for value in values for target in value.loop_targets),
             )
 
     def visit_With(self, node):
