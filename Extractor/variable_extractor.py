@@ -13,8 +13,9 @@ from .metadata.python_stdlib import ALL_PYTHON_MODULES
 @dataclass(frozen=True)
 class Binding:
     origins: tuple = ()
-    # Conditional assignments can leave an external value in scope.
+    # A local declaration and definite assignment are separate facts.
     unbound: bool = False
+    local: bool = True
 
 
 def _unique_origins(origins):
@@ -66,12 +67,12 @@ class VariableExtractor:
         for frame in reversed(self.scopes if frames is None else frames):
             if name in frame:
                 return frame[name]
-        return Binding(unbound=True)
+        return Binding(unbound=True, local=False)
 
     def _name_origins(self, name):
         binding = self._lookup(name)
         origins = list(binding.origins)
-        if binding.unbound and name not in self.runtime_globals:
+        if binding.unbound and not binding.local and name not in self.runtime_globals:
             origins.append(self._root(name))
         return _unique_origins(origins)
 
@@ -146,11 +147,12 @@ class VariableExtractor:
             self._origins(node)
             self._access_side_expressions(node)
         elif isinstance(node, nodes.Call):
-            # A method is not a data field; its receiver and all call arguments
-            # are inputs. An external callable name is itself a context input.
+            # Direct callee names and method names are callable dependencies,
+            # not data inputs. Receivers, nested calls, and arguments still
+            # contain data inputs; the same name read as data is not excluded.
             if isinstance(node.node, nodes.Getattr):
                 self.expression(node.node.node)
-            else:
+            elif not isinstance(node.node, nodes.Name):
                 self.expression(node.node)
             self._arguments(node)
         elif isinstance(node, (nodes.Filter, nodes.Test)):
@@ -253,8 +255,11 @@ class VariableExtractor:
             prior = self._lookup(name)
             values = [frame.get(name, prior) for frame in branches]
             self.scopes[-1][name] = Binding(
-                _unique_origins(origin for value in values for origin in value.origins),
-                any(value.unbound for value in values),
+                origins=_unique_origins(origin for value in values for origin in value.origins),
+                unbound=any(value.unbound for value in values),
+                # A conditional local does not become an external data input
+                # merely because another branch leaves it unassigned.
+                local=any(value.local for value in values),
             )
 
     def visit_With(self, node):
@@ -329,9 +334,10 @@ class VariableExtractor:
 def extract_variables(parsed_ast, runtime_globals=(), input_names=()):
     """Return external input structure using fresh state for every invocation.
 
-    Only actual Jinja environment globals (and explicitly supplied names) are
-    excluded. Macro arguments, imports, assignments, loop targets, and with/call
-    bindings are local. Conditional assignments retain possible external inputs.
+    Environment globals and direct callee names are not data inputs. Macro
+    arguments, imports, assignments, loop targets, and with/call bindings are
+    local. Conditional declarations remain local after branch merging; their
+    external value origins and data reads before assignment are still collected.
     """
     context = parsed_ast[0] if isinstance(parsed_ast, list) and parsed_ast else parsed_ast
     environment = getattr(context, "environment", None)
