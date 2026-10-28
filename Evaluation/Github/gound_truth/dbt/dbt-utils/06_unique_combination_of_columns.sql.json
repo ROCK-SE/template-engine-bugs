@@ -1,0 +1,62 @@
+{
+  "variables": {
+    "adapter": {},
+    "exceptions": {
+      "caveat": "Variable name 'exceptions' conflicts with a Python built-in module.",
+      "is_conflicting_with_builtin_module": true
+    },
+    "quote": {}
+  },
+  "tag": {
+    "test": {
+      "node_type": "Macro",
+      "is_builtin": false,
+      "origin": "dbt",
+      "syntax": "{% test name(args) %}...{% endtest %}",
+      "description": "Define a dbt generic data test with local parameters."
+    },
+    "macro": {
+      "node_type": "Macro",
+      "is_builtin": true,
+      "syntax": "{% macro name(args, kwargs=default) %}...{% endmacro %}",
+      "description": "Define a reusable template function that can accept arguments and return rendered output.",
+      "caveat": "Macros perform no type checking. Variables defined inside a macro are local. Recursive macros may cause stack overflows."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    },
+    "set": {
+      "node_type": "Assign",
+      "is_builtin": true,
+      "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+      "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+      "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    },
+    "do": {
+      "node_type": "ExprStmt",
+      "is_builtin": true,
+      "syntax": "{% do expression %}",
+      "description": "Evaluate an expression for its side effects without rendering its result.",
+      "caveat": "The result is discarded. To display a value, use {{ }} instead."
+    }
+  },
+  "filter": {
+    "join": {
+      "is_builtin": true,
+      "signature": "join(value, d='', attribute=None)",
+      "description": "Join items into a string using a delimiter.",
+      "caveat": "All items must be string-convertible."
+    }
+  }
+}

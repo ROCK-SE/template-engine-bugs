@@ -1,0 +1,79 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\ansible\\ansible-devops\\09_from-filesystem.txt.j2",
+  "relative_template_path": "ansible/ansible-devops/09_from-filesystem.txt.j2",
+  "scenario": "ansible",
+  "repository": "ansible-devops",
+  "source_sha256": "8dfc45358fc5fab7598a8d1b4e2d6b2dd506ebb0d29181feee2c5299a5d577ce",
+  "status": "success",
+  "variables": {
+    "extra_images": {
+      "type": "Iterable",
+      "property": {
+        "image": {
+          "property": {
+            "name": {},
+            "digest": {},
+            "tag": {}
+          }
+        }
+      }
+    },
+    "registry_public_url_with_path": {}
+  },
+  "variable_count": 2,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "b64encode",
+      "comment"
+    ],
+    "registered_framework_tests": [],
+    "registration_evidence": [
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64encode_filter.html",
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/comment_filter.html"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "e7bce94be8fe81f0347b919d6eb5dbcfb75ca17d85c3986bf93266962f0b1b4a",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {},
+  "jinja2_version": "3.1.6"
+}

@@ -1,0 +1,958 @@
+{
+  "tool": "jinja2schema",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\ansible\\ansible-role-nginx\\03_nginx.conf.j2",
+  "relative_template_path": "ansible/ansible-role-nginx/03_nginx.conf.j2",
+  "scenario": "ansible",
+  "repository": "ansible-role-nginx",
+  "source_sha256": "631f503743fbc02fe31613f88a21b8f480aa49a66698f136f0e3efbfbccebb4a",
+  "status": "success",
+  "variables": {
+    "nginx_access_log": {
+      "title": "nginx_access_log",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_client_max_body_size": {
+      "title": "nginx_client_max_body_size",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_conf_path": {
+      "title": "nginx_conf_path",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_error_log": {
+      "title": "nginx_error_log",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_extra_conf_options": {
+      "title": "nginx_extra_conf_options",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_extra_http_options": {
+      "title": "nginx_extra_http_options",
+      "type": "string"
+    },
+    "nginx_keepalive_requests": {
+      "title": "nginx_keepalive_requests",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_keepalive_timeout": {
+      "title": "nginx_keepalive_timeout",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_log_format": {
+      "title": "nginx_log_format",
+      "type": "string"
+    },
+    "nginx_mime_file_path": {
+      "title": "nginx_mime_file_path",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_multi_accept": {
+      "title": "nginx_multi_accept",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_pidfile": {
+      "title": "nginx_pidfile",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_proxy_cache_path": {
+      "title": "nginx_proxy_cache_path",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_sendfile": {
+      "title": "nginx_sendfile",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_server_names_hash_bucket_size": {
+      "title": "nginx_server_names_hash_bucket_size",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_server_tokens": {
+      "title": "nginx_server_tokens",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_tcp_nodelay": {
+      "title": "nginx_tcp_nodelay",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_tcp_nopush": {
+      "title": "nginx_tcp_nopush",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_upstreams": {
+      "title": "nginx_upstreams",
+      "type": "array",
+      "items": {
+        "title": "upstream",
+        "type": "object",
+        "properties": {
+          "keepalive": {
+            "title": "keepalive",
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "name": {
+            "title": "name",
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "strategy": {
+            "title": "strategy",
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "servers": {
+            "title": "servers",
+            "type": "array",
+            "items": {
+              "title": "server",
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "keepalive",
+          "name",
+          "strategy",
+          "servers"
+        ]
+      }
+    },
+    "nginx_user": {
+      "title": "nginx_user",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_vhost_path": {
+      "title": "nginx_vhost_path",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_worker_connections": {
+      "title": "nginx_worker_connections",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "nginx_worker_processes": {
+      "title": "nginx_worker_processes",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "variable_count": 23,
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "nginx_client_max_body_size": {
+        "title": "nginx_client_max_body_size",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_upstreams": {
+        "title": "nginx_upstreams",
+        "type": "array",
+        "items": {
+          "title": "upstream",
+          "type": "object",
+          "properties": {
+            "keepalive": {
+              "title": "keepalive",
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "name": {
+              "title": "name",
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "strategy": {
+              "title": "strategy",
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "servers": {
+              "title": "servers",
+              "type": "array",
+              "items": {
+                "title": "server",
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "keepalive",
+            "name",
+            "strategy",
+            "servers"
+          ]
+        }
+      },
+      "nginx_keepalive_requests": {
+        "title": "nginx_keepalive_requests",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_conf_path": {
+        "title": "nginx_conf_path",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_server_names_hash_bucket_size": {
+        "title": "nginx_server_names_hash_bucket_size",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_user": {
+        "title": "nginx_user",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_access_log": {
+        "title": "nginx_access_log",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_vhost_path": {
+        "title": "nginx_vhost_path",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_multi_accept": {
+        "title": "nginx_multi_accept",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_extra_http_options": {
+        "title": "nginx_extra_http_options",
+        "type": "string"
+      },
+      "nginx_worker_connections": {
+        "title": "nginx_worker_connections",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_mime_file_path": {
+        "title": "nginx_mime_file_path",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_keepalive_timeout": {
+        "title": "nginx_keepalive_timeout",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_proxy_cache_path": {
+        "title": "nginx_proxy_cache_path",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_pidfile": {
+        "title": "nginx_pidfile",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_tcp_nopush": {
+        "title": "nginx_tcp_nopush",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_error_log": {
+        "title": "nginx_error_log",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_worker_processes": {
+        "title": "nginx_worker_processes",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_extra_conf_options": {
+        "title": "nginx_extra_conf_options",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_server_tokens": {
+        "title": "nginx_server_tokens",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_log_format": {
+        "title": "nginx_log_format",
+        "type": "string"
+      },
+      "nginx_tcp_nodelay": {
+        "title": "nginx_tcp_nodelay",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "nginx_sendfile": {
+        "title": "nginx_sendfile",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "required": [
+      "nginx_client_max_body_size",
+      "nginx_upstreams",
+      "nginx_keepalive_requests",
+      "nginx_conf_path",
+      "nginx_server_names_hash_bucket_size",
+      "nginx_user",
+      "nginx_access_log",
+      "nginx_vhost_path",
+      "nginx_multi_accept",
+      "nginx_extra_http_options",
+      "nginx_worker_connections",
+      "nginx_mime_file_path",
+      "nginx_keepalive_timeout",
+      "nginx_proxy_cache_path",
+      "nginx_pidfile",
+      "nginx_tcp_nopush",
+      "nginx_error_log",
+      "nginx_worker_processes",
+      "nginx_extra_conf_options",
+      "nginx_server_tokens",
+      "nginx_log_format",
+      "nginx_tcp_nodelay",
+      "nginx_sendfile"
+    ]
+  },
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "b64encode",
+      "comment"
+    ],
+    "registered_framework_tests": [],
+    "registration_evidence": [
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64encode_filter.html",
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/comment_filter.html"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "46972001041faa45869e23c796cf486fb1f1e52a530269a26105783e4b7c36dd",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "0.1.4"
+}

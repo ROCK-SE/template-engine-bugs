@@ -1,0 +1,46 @@
+{
+  "variables": {
+    "ansible_managed": {},
+    "__postgresql_server_tuning": {},
+    "ansible_facts": {
+      "property": {
+        "memory_mb": {
+          "property": {
+            "real": {
+              "property": {
+                "total": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "postgresql_ssl_enable": {}
+  },
+  "tag": {
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    }
+  },
+  "filter": {
+    "comment": {
+      "is_builtin": false
+    },
+    "int": {
+      "is_builtin": true,
+      "signature": "int(value, default=0, base=10)",
+      "description": "Convert a value to an integer.",
+      "caveat": "Floats are truncated, not rounded."
+    },
+    "abs": {
+      "is_builtin": true,
+      "signature": "abs(x)",
+      "description": "Return the absolute value of a number.",
+      "caveat": "Only works with numeric types."
+    }
+  }
+}

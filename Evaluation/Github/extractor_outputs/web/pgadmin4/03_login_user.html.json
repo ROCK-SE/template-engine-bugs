@@ -1,0 +1,115 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\pgadmin4\\03_login_user.html",
+  "relative_template_path": "web/pgadmin4/03_login_user.html",
+  "scenario": "web",
+  "repository": "pgadmin4",
+  "source_sha256": "8fbf443c4bc1ec5460b90becd33b3a11b9c7a388f1e6267661e29086c031ca19",
+  "status": "success",
+  "variables": {
+    "request": {
+      "property": {
+        "cookies": {}
+      }
+    },
+    "config": {
+      "property": {
+        "LANGUAGES": {
+          "type": "Iterable",
+          "property": {
+            "key": {},
+            "lang": {}
+          }
+        },
+        "OAUTH2_CONFIG": {
+          "type": "Iterable",
+          "property": {
+            "__dynamic_getitem__()": {}
+          }
+        },
+        "AUTHENTICATION_SOURCES": {},
+        "OAUTH2": {},
+        "KERBEROS": {},
+        "LOGIN_BANNER": {}
+      }
+    }
+  },
+  "variable_count": 2,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [
+      {
+        "kind": "Extends",
+        "line": 30,
+        "template": "security/render_page.html",
+        "expression_type": "Const",
+        "action": "exclude_external_body"
+      }
+    ],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "04be7781edaa0668c7339ee5adcdeb999ce3e788406c717f3e377f60f5b81e41",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "set": {
+      "node_type": "Assign",
+      "is_builtin": true,
+      "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+      "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+      "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    },
+    "extends": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% extends template %}",
+      "description": "Declare template inheritance from a parent template. The child template may override blocks defined by the parent.",
+      "caveat": "The extends tag must appear before any output, except whitespace or comments."
+    }
+  },
+  "filter": {
+    "safe": {
+      "is_builtin": true,
+      "signature": "safe(value)",
+      "description": "Mark a string as safe HTML, disabling auto-escaping.",
+      "caveat": "Use only with trusted content; improper use can cause XSS vulnerabilities."
+    }
+  },
+  "jinja2_version": "3.1.6"
+}

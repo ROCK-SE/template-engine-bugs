@@ -1,0 +1,63 @@
+{
+  "tool": "meta",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\pgadmin4\\03_login_user.html",
+  "relative_template_path": "web/pgadmin4/03_login_user.html",
+  "scenario": "web",
+  "repository": "pgadmin4",
+  "source_sha256": "8fbf443c4bc1ec5460b90becd33b3a11b9c7a388f1e6267661e29086c031ca19",
+  "status": "success",
+  "variables": {
+    "config": {},
+    "csrf_token": {},
+    "request": {},
+    "url_for": {}
+  },
+  "variable_count": 4,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [
+      {
+        "kind": "Extends",
+        "line": 30,
+        "template": "security/render_page.html",
+        "expression_type": "Const",
+        "action": "exclude_external_body"
+      }
+    ],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "04be7781edaa0668c7339ee5adcdeb999ce3e788406c717f3e377f60f5b81e41",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "3.1.6"
+}

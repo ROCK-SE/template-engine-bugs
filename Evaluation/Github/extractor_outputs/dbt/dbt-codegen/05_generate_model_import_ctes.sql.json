@@ -1,0 +1,155 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\dbt\\dbt-codegen\\05_generate_model_import_ctes.sql",
+  "relative_template_path": "dbt/dbt-codegen/05_generate_model_import_ctes.sql",
+  "scenario": "dbt",
+  "repository": "dbt-codegen",
+  "source_sha256": "9a3a812c10bd08a414d9c1e258b2ae83a3e22f4659f3a9d26e213870d791ec8f",
+  "status": "success",
+  "variables": {
+    "adapter": {},
+    "execute": {},
+    "graph": {
+      "property": {
+        "nodes": {}
+      }
+    },
+    "modules": {
+      "property": {
+        "re": {}
+      }
+    }
+  },
+  "variable_count": 4,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "3017fe62588df676db28472a5df1b352e2bbe0c254df596d9791dcfcaf57a76d",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "macro": {
+      "node_type": "Macro",
+      "is_builtin": true,
+      "syntax": "{% macro name(args, kwargs=default) %}...{% endmacro %}",
+      "description": "Define a reusable template function that can accept arguments and return rendered output.",
+      "caveat": "Macros perform no type checking. Variables defined inside a macro are local. Recursive macros may cause stack overflows."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    },
+    "set": {
+      "node_type": "Assign",
+      "is_builtin": true,
+      "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+      "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+      "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    },
+    "do": {
+      "node_type": "ExprStmt",
+      "is_builtin": true,
+      "syntax": "{% do expression %}",
+      "description": "Evaluate an expression for its side effects without rendering its result.",
+      "caveat": "The result is discarded. To display a value, use {{ }} instead."
+    }
+  },
+  "filter": {
+    "selectattr": {
+      "is_builtin": true,
+      "signature": "selectattr(value, attr, test)",
+      "description": "Filter objects by attribute value.",
+      "caveat": "Objects without the attribute are skipped."
+    },
+    "list": {
+      "is_builtin": true,
+      "signature": "list(value)",
+      "description": "Convert a value into a list.",
+      "caveat": "Strings are split into individual characters."
+    },
+    "trim": {
+      "is_builtin": true,
+      "signature": "trim(value, chars=None)",
+      "description": "Strip characters from both ends of a string.",
+      "caveat": "Equivalent to Python's strip()."
+    },
+    "join": {
+      "is_builtin": true,
+      "signature": "join(value, d='', attribute=None)",
+      "description": "Join items into a string using a delimiter.",
+      "caveat": "All items must be string-convertible."
+    },
+    "lower": {
+      "is_builtin": true,
+      "signature": "lower(s)",
+      "description": "Convert a string to lowercase.",
+      "caveat": "Only applicable to strings."
+    },
+    "length": {
+      "is_builtin": true,
+      "signature": "length(obj)",
+      "description": "Return the number of items in an object.",
+      "caveat": "Returns 0 for objects without a defined length."
+    },
+    "replace": {
+      "is_builtin": true,
+      "signature": "replace(s, old, new, count=None)",
+      "description": "Replace occurrences of a substring.",
+      "caveat": "Case-sensitive; regex is not supported."
+    },
+    "unique": {
+      "is_builtin": true,
+      "signature": "unique(value, case_sensitive=False, attribute=None)",
+      "description": "Return unique items from a sequence while preserving order.",
+      "caveat": "Returns an iterator; convert to list if reuse is needed."
+    },
+    "sort": {
+      "is_builtin": true,
+      "signature": "sort(value, reverse=False, case_sensitive=False, attribute=None)",
+      "description": "Sort a sequence.",
+      "caveat": "Elements must be comparable; attribute must exist on objects."
+    }
+  },
+  "jinja2_version": "3.1.6"
+}

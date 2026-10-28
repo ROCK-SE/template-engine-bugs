@@ -1,0 +1,43 @@
+{
+  "variables": {
+    "ts": {},
+    "events_by_date": {
+      "type": "Iterable",
+      "property": {
+        "date": {},
+        "events": {
+          "type": "Iterable",
+          "property": {
+            "event": {
+              "property": {
+                "id": {},
+                "start_dt": {},
+                "category": {},
+                "url": {},
+                "title": {},
+                "room": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tag": {
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {
+    "format_date": {
+      "is_builtin": false
+    },
+    "format_time": {
+      "is_builtin": false
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\indico\\10_series_created_msg.html",
+  "relative_template_path": "web/indico/10_series_created_msg.html",
+  "scenario": "web",
+  "repository": "indico",
+  "source_sha256": "8768efb915cc0665e919cd0e4d2d736633050717c2ec853fcdac37b05bd285dc",
+  "status": "success",
+  "variables": {
+    "events": {
+      "type": "Iterable",
+      "property": {
+        "event": {
+          "property": {
+            "start_dt": {},
+            "title": {}
+          }
+        }
+      }
+    }
+  },
+  "variable_count": 1,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "format_date",
+      "format_skeleton",
+      "format_time"
+    ],
+    "registered_framework_tests": [
+      "subclassof"
+    ],
+    "registration_evidence": [
+      "tests/web/indico/indico/web/flask/app.py:233-238,261"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "a66fb0a6c5a58aba992e1a7e56fba9cd9c37889ae04966e1025725f35a492ed1",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "trans": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% trans bindings %}...{% pluralize %}...{% endtrans %}",
+      "description": "Mark text for translation using Jinja's i18n extension.",
+      "extension": "jinja2.ext.i18n",
+      "caveat": "Source extraction preserves this tag after i18n AST lowering."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {
+    "length": {
+      "is_builtin": true,
+      "signature": "length(obj)",
+      "description": "Return the number of items in an object.",
+      "caveat": "Returns 0 for objects without a defined length."
+    },
+    "format_date": {
+      "is_builtin": false
+    }
+  },
+  "jinja2_version": "3.1.6"
+}

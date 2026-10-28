@@ -1,0 +1,113 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\indico\\09_meta.html",
+  "relative_template_path": "web/indico/09_meta.html",
+  "scenario": "web",
+  "repository": "indico",
+  "source_sha256": "9dc0ca89c1d656d48c0ed4b25b0deff9ab20a680472bc546ef09702f54124edc",
+  "status": "success",
+  "variables": {
+    "page_metadata": {
+      "property": {
+        "og": {
+          "type": "Iterable",
+          "property": {
+            "key": {},
+            "value": {}
+          }
+        },
+        "json_ld": {},
+        "keywords": {}
+      }
+    }
+  },
+  "variable_count": 1,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "format_date",
+      "format_skeleton",
+      "format_time"
+    ],
+    "registered_framework_tests": [
+      "subclassof"
+    ],
+    "registration_evidence": [
+      "tests/web/indico/indico/web/flask/app.py:233-238,261"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "5a6eb327073a5c8178694da637316a7dbb66180fdc914eefa93d7b3a81f26fc5",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {
+    "striptags": {
+      "is_builtin": true,
+      "signature": "striptags(value)",
+      "description": "Remove HTML/XML tags from a string.",
+      "caveat": "Does not decode HTML entities."
+    },
+    "truncate": {
+      "is_builtin": true,
+      "signature": "truncate(s, length=255, killwords=False, end='...')",
+      "description": "Truncate a string to a given length.",
+      "caveat": "HTML tags are not taken into account."
+    },
+    "tojson": {
+      "is_builtin": true,
+      "signature": "tojson(value, indent=None)",
+      "description": "Serialize an object to a JSON-formatted string.",
+      "caveat": "Not all Python objects are JSON-serializable."
+    },
+    "join": {
+      "is_builtin": true,
+      "signature": "join(value, d='', attribute=None)",
+      "description": "Join items into a string using a delimiter.",
+      "caveat": "All items must be string-convertible."
+    }
+  },
+  "jinja2_version": "3.1.6"
+}

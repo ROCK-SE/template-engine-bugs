@@ -1,0 +1,69 @@
+{
+  "tool": "meta",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\indico\\01_category_search.html",
+  "relative_template_path": "web/indico/01_category_search.html",
+  "scenario": "web",
+  "repository": "indico",
+  "source_sha256": "971d7847a7dc1245754d4167c262529f8e69c95f8f0f495a59f7bc0eb7db9a17",
+  "status": "success",
+  "variables": {
+    "category": {},
+    "session": {}
+  },
+  "variable_count": 2,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "format_date",
+      "format_skeleton",
+      "format_time"
+    ],
+    "registered_framework_tests": [
+      "subclassof"
+    ],
+    "registration_evidence": [
+      "tests/web/indico/indico/web/flask/app.py:233-238,261"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [
+      {
+        "kind": "Extends",
+        "line": 1,
+        "template": "layout/base.html",
+        "expression_type": "Const",
+        "action": "exclude_external_body"
+      }
+    ],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "61ddb2eecfba3bd0828700dd67df39a13281941aa610509ff995db826eab7f25",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "3.1.6"
+}

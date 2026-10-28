@@ -1,0 +1,54 @@
+{
+  "tool": "meta",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\dbt\\jaffle-shop\\01_stg_orders.sql",
+  "relative_template_path": "dbt/jaffle-shop/01_stg_orders.sql",
+  "scenario": "dbt",
+  "repository": "jaffle-shop",
+  "source_sha256": "219dca44e577441d609fb86073864ac6db9636bf588f638cc4891b56508df7a3",
+  "status": "success",
+  "variables": {
+    "cents_to_dollars": {},
+    "dbt": {},
+    "source": {}
+  },
+  "variable_count": 3,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "55f5567916c9f27b0fd29d363db5c9b077e8e9134678e7eaf595925b0cf51c94",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "3.1.6"
+}

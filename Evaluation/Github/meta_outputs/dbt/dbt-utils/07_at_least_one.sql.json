@@ -1,0 +1,60 @@
+{
+  "tool": "meta",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\dbt\\dbt-utils\\07_at_least_one.sql",
+  "relative_template_path": "dbt/dbt-utils/07_at_least_one.sql",
+  "scenario": "dbt",
+  "repository": "dbt-utils",
+  "source_sha256": "14f0b45756f3014b5ea779d4a616b2e2bf86d2f527094c475c946034382e7619",
+  "status": "success",
+  "variables": {
+    "adapter": {},
+    "groupby_gb_cols": {},
+    "return": {},
+    "select_gb_cols": {}
+  },
+  "variable_count": 4,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [
+      {
+        "name": "test_at_least_one",
+        "line": 1
+      }
+    ],
+    "normalized_ast_sha256": "e609802cd21c7c6e6a2fb352a9faddfddfa956b3386fcad0f19385e8cf4feecc",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "3.1.6"
+}

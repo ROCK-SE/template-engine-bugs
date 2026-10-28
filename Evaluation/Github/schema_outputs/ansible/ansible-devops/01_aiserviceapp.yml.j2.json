@@ -1,0 +1,65 @@
+{
+  "tool": "jinja2schema",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\ansible\\ansible-devops\\01_aiserviceapp.yml.j2",
+  "relative_template_path": "ansible/ansible-devops/01_aiserviceapp.yml.j2",
+  "scenario": "ansible",
+  "repository": "ansible-devops",
+  "source_sha256": "146d23c0005ff628c7b67a90e0107bac3c776c7e8103c0d00d3c2184a5c5549c",
+  "status": "inference_failure",
+  "variables": null,
+  "variable_count": null,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "b64encode",
+      "comment"
+    ],
+    "registered_framework_tests": [],
+    "registration_evidence": [
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64encode_filter.html",
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/comment_filter.html"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "4ba60a161fba427cd62b9c15c1827dda0965e9842121722770f17387f31ae61a",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": {
+    "phase": "inference",
+    "category": "unsupported_filter_inference",
+    "type": "InvalidExpression",
+    "message": "line 23: unknown filter",
+    "line": 23,
+    "lines": [
+      23
+    ]
+  },
+  "jinja2_version": "3.1.6",
+  "tool_version": "0.1.4"
+}

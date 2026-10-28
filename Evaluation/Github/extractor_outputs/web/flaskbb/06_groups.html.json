@@ -1,0 +1,150 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\flaskbb\\06_groups.html",
+  "relative_template_path": "web/flaskbb/06_groups.html",
+  "scenario": "web",
+  "repository": "flaskbb",
+  "source_sha256": "6788e1705229f5b7a2b7f4f76851ac82488dff5e7b8047adbc169e60e6dedbe9",
+  "status": "success",
+  "variables": {
+    "groups": {
+      "property": {
+        "items": {
+          "type": "Iterable",
+          "property": {
+            "group": {
+              "property": {
+                "id": {},
+                "name": {},
+                "description": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "variable_count": 1,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [
+      {
+        "kind": "Extends",
+        "line": 1,
+        "template": null,
+        "expression_type": "Call",
+        "action": "retain_template_name_expression"
+      },
+      {
+        "kind": "Include",
+        "line": 89,
+        "template": null,
+        "expression_type": "Call",
+        "action": "retain_template_name_expression"
+      }
+    ],
+    "imports_retained": [
+      {
+        "kind": "FromImport",
+        "line": 13
+      },
+      {
+        "kind": "FromImport",
+        "line": 14
+      }
+    ],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "f0dc446cb5cd93b9e518e73caf4b7089e3b8930cd76e25afa71c6d0397e0c72d",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "extends": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% extends template %}",
+      "description": "Declare template inheritance from a parent template. The child template may override blocks defined by the parent.",
+      "caveat": "The extends tag must appear before any output, except whitespace or comments."
+    },
+    "set": {
+      "node_type": "Assign",
+      "is_builtin": true,
+      "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+      "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+      "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+    },
+    "block": {
+      "node_type": "Block",
+      "is_builtin": true,
+      "syntax": "{% block name scoped %}...{% endblock %}",
+      "description": "Define a named block that can be overridden by child templates during template inheritance.",
+      "caveat": "Block names must be unique within a template."
+    },
+    "trans": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% trans bindings %}...{% pluralize %}...{% endtrans %}",
+      "description": "Mark text for translation using Jinja's i18n extension.",
+      "extension": "jinja2.ext.i18n",
+      "caveat": "Source extraction preserves this tag after i18n AST lowering."
+    },
+    "from": {
+      "node_type": "FromImport",
+      "is_builtin": true,
+      "syntax": "{% from template import name1, name2 as alias with context %}",
+      "description": "Import specific macros or variables from another template into the current namespace.",
+      "caveat": "Only explicitly imported names are available. Aliases should not shadow existing variables."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    },
+    "include": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% include template ignore missing with context %}",
+      "description": "Include and render another template within the current one. Supports optional context isolation and missing-template handling.",
+      "caveat": "Included templates share the current context by default."
+    }
+  },
+  "filter": {},
+  "jinja2_version": "3.1.6"
+}

@@ -1,0 +1,59 @@
+{
+  "variables": {
+    "page_metadata": {
+      "property": {
+        "og": {
+          "type": "Iterable",
+          "property": {
+            "key": {},
+            "value": {}
+          }
+        },
+        "json_ld": {},
+        "keywords": {}
+      }
+    }
+  },
+  "tag": {
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {
+    "striptags": {
+      "is_builtin": true,
+      "signature": "striptags(value)",
+      "description": "Remove HTML/XML tags from a string.",
+      "caveat": "Does not decode HTML entities."
+    },
+    "truncate": {
+      "is_builtin": true,
+      "signature": "truncate(s, length=255, killwords=False, end='...')",
+      "description": "Truncate a string to a given length.",
+      "caveat": "HTML tags are not taken into account."
+    },
+    "tojson": {
+      "is_builtin": true,
+      "signature": "tojson(value, indent=None)",
+      "description": "Serialize an object to a JSON-formatted string.",
+      "caveat": "Not all Python objects are JSON-serializable."
+    },
+    "join": {
+      "is_builtin": true,
+      "signature": "join(value, d='', attribute=None)",
+      "description": "Join items into a string using a delimiter.",
+      "caveat": "All items must be string-convertible."
+    }
+  }
+}

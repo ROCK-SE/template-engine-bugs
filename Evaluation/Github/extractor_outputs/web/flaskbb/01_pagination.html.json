@@ -1,0 +1,106 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\flaskbb\\01_pagination.html",
+  "relative_template_path": "web/flaskbb/01_pagination.html",
+  "scenario": "web",
+  "repository": "flaskbb",
+  "source_sha256": "2c38868d20c37280964d8540dd390e756d5e2da297cb5e7f5d6e7badde53b58b",
+  "status": "success",
+  "variables": {
+    "ul_class": {}
+  },
+  "variable_count": 1,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "38fedeec24a363704f6f7d523bbb2de1b51cad616e51b7eea608ce0d7a7e98d7",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "macro": {
+      "node_type": "Macro",
+      "is_builtin": true,
+      "syntax": "{% macro name(args, kwargs=default) %}...{% endmacro %}",
+      "description": "Define a reusable template function that can accept arguments and return rendered output.",
+      "caveat": "Macros perform no type checking. Variables defined inside a macro are local. Recursive macros may cause stack overflows."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    },
+    "set": {
+      "node_type": "Assign",
+      "is_builtin": true,
+      "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+      "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+      "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+    },
+    "trans": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% trans bindings %}...{% pluralize %}...{% endtrans %}",
+      "description": "Mark text for translation using Jinja's i18n extension.",
+      "extension": "jinja2.ext.i18n",
+      "caveat": "Source extraction preserves this tag after i18n AST lowering."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {
+    "urlencode": {
+      "is_builtin": true,
+      "signature": "urlencode(value)",
+      "description": "URL-encode a string or dictionary.",
+      "caveat": "Dictionaries are converted into query strings."
+    },
+    "round": {
+      "is_builtin": true
+    },
+    "int": {
+      "is_builtin": true,
+      "signature": "int(value, default=0, base=10)",
+      "description": "Convert a value to an integer.",
+      "caveat": "Floats are truncated, not rounded."
+    }
+  },
+  "jinja2_version": "3.1.6"
+}

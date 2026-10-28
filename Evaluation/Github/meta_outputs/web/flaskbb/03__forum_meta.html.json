@@ -1,0 +1,52 @@
+{
+  "tool": "meta",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\flaskbb\\03__forum_meta.html",
+  "relative_template_path": "web/flaskbb/03__forum_meta.html",
+  "scenario": "web",
+  "repository": "flaskbb",
+  "source_sha256": "424e294a4e64fa8298f995149cec40290ea2aa6f007f9eb5899d64f3c272865e",
+  "status": "success",
+  "variables": {
+    "with_checkbox": {}
+  },
+  "variable_count": 1,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "4f840e62a2b3334e76117921fc4b9a6c9d8a8eca3e9b7bb8f82f180c7f0a3a9f",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "3.1.6"
+}

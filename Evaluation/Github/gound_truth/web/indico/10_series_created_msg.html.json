@@ -1,0 +1,43 @@
+{
+  "variables": {
+    "events": {
+      "type": "Iterable",
+      "property": {
+        "event": {
+          "property": {
+            "start_dt": {},
+            "title": {}
+          }
+        }
+      }
+    }
+  },
+  "tag": {
+    "trans": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% trans bindings %}...{% pluralize %}...{% endtrans %}",
+      "description": "Mark text for translation using Jinja's i18n extension.",
+      "extension": "jinja2.ext.i18n",
+      "caveat": "Source extraction preserves this tag after i18n AST lowering."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {
+    "length": {
+      "is_builtin": true,
+      "signature": "length(obj)",
+      "description": "Return the number of items in an object.",
+      "caveat": "Returns 0 for objects without a defined length."
+    },
+    "format_date": {
+      "is_builtin": false
+    }
+  }
+}

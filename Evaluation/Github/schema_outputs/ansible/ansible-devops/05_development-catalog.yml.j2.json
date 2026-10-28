@@ -1,0 +1,98 @@
+{
+  "tool": "jinja2schema",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\ansible\\ansible-devops\\05_development-catalog.yml.j2",
+  "relative_template_path": "ansible/ansible-devops/05_development-catalog.yml.j2",
+  "scenario": "ansible",
+  "repository": "ansible-devops",
+  "source_sha256": "b5eec6fb7903190ba482b9ce9dea0c0129543e187d1fb6a1ae98d8558507e3c5",
+  "status": "success",
+  "variables": {
+    "mas_catalog_version": {
+      "title": "mas_catalog_version",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "variable_count": 1,
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "mas_catalog_version": {
+        "title": "mas_catalog_version",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "required": [
+      "mas_catalog_version"
+    ]
+  },
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "b64encode",
+      "comment"
+    ],
+    "registered_framework_tests": [],
+    "registration_evidence": [
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64encode_filter.html",
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/comment_filter.html"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "2fe86b0601f084dfc2958e7d01ec08945287cb0bc534d9ee20982e321e2efba8",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "0.1.4"
+}

@@ -1,0 +1,74 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\flaskbb\\05_layout.html",
+  "relative_template_path": "web/flaskbb/05_layout.html",
+  "scenario": "web",
+  "repository": "flaskbb",
+  "source_sha256": "bea1a84c614b0f900a654e3c342df751b6d93a837ed35c64a701986ce31c23ec",
+  "status": "success",
+  "variables": {},
+  "variable_count": 0,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [
+      {
+        "kind": "Extends",
+        "line": 1,
+        "template": "layout.html",
+        "expression_type": "Const",
+        "action": "exclude_external_body"
+      }
+    ],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "99bf8fc90a6a81541a6b638abf0e1a710363b5033518a125434f6590c2637f83",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "extends": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% extends template %}",
+      "description": "Declare template inheritance from a parent template. The child template may override blocks defined by the parent.",
+      "caveat": "The extends tag must appear before any output, except whitespace or comments."
+    },
+    "block": {
+      "node_type": "Block",
+      "is_builtin": true,
+      "syntax": "{% block name scoped %}...{% endblock %}",
+      "description": "Define a named block that can be overridden by child templates during template inheritance.",
+      "caveat": "Block names must be unique within a template."
+    }
+  },
+  "filter": {},
+  "jinja2_version": "3.1.6"
+}

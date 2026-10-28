@@ -1,0 +1,81 @@
+{
+  "variables": {
+    "placeholders": {
+      "type": "Iterable",
+      "property": {
+        "placeholder": {
+          "property": {
+            "advanced": {},
+            "description": {},
+            "friendly_name": {},
+            "required": {},
+            "name": {}
+          }
+        }
+      }
+    },
+    "ParametrizedPlaceholder": {},
+    "placeholder_kwargs": {}
+  },
+  "tag": {
+    "macro": {
+      "node_type": "Macro",
+      "is_builtin": true,
+      "syntax": "{% macro name(args, kwargs=default) %}...{% endmacro %}",
+      "description": "Define a reusable template function that can accept arguments and return rendered output.",
+      "caveat": "Macros perform no type checking. Variables defined inside a macro are local. Recursive macros may cause stack overflows."
+    },
+    "set": {
+      "node_type": "Assign",
+      "is_builtin": true,
+      "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+      "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+      "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    },
+    "trans": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% trans bindings %}...{% pluralize %}...{% endtrans %}",
+      "description": "Mark text for translation using Jinja's i18n extension.",
+      "extension": "jinja2.ext.i18n",
+      "caveat": "Source extraction preserves this tag after i18n AST lowering."
+    }
+  },
+  "filter": {
+    "safe": {
+      "is_builtin": true,
+      "signature": "safe(value)",
+      "description": "Mark a string as safe HTML, disabling auto-escaping.",
+      "caveat": "Use only with trusted content; improper use can cause XSS vulnerabilities."
+    },
+    "selectattr": {
+      "is_builtin": true,
+      "signature": "selectattr(value, attr, test)",
+      "description": "Filter objects by attribute value.",
+      "caveat": "Objects without the attribute are skipped."
+    },
+    "list": {
+      "is_builtin": true,
+      "signature": "list(value)",
+      "description": "Convert a value into a list.",
+      "caveat": "Strings are split into individual characters."
+    },
+    "count": {
+      "is_builtin": true
+    }
+  }
+}

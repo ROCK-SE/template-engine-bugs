@@ -1,0 +1,61 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\dbt\\jaffle-shop\\02_cents_to_dollars.sql",
+  "relative_template_path": "dbt/jaffle-shop/02_cents_to_dollars.sql",
+  "scenario": "dbt",
+  "repository": "jaffle-shop",
+  "source_sha256": "ebf9c659ff7fc51502c15dfe5a69996589f8f06351b4bed2bba9177f5e2a74a4",
+  "status": "success",
+  "variables": {
+    "adapter": {}
+  },
+  "variable_count": 1,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "7d31b242a1a79eb46c8177c66d05592f2e80bd7d62e212883164764ad35541bc",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "macro": {
+      "node_type": "Macro",
+      "is_builtin": true,
+      "syntax": "{% macro name(args, kwargs=default) %}...{% endmacro %}",
+      "description": "Define a reusable template function that can accept arguments and return rendered output.",
+      "caveat": "Macros perform no type checking. Variables defined inside a macro are local. Recursive macros may cause stack overflows."
+    }
+  },
+  "filter": {},
+  "jinja2_version": "3.1.6"
+}

@@ -1,0 +1,63 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\ansible\\ansible-role-nginx\\02_nginx.repo.j2",
+  "relative_template_path": "ansible/ansible-role-nginx/02_nginx.repo.j2",
+  "scenario": "ansible",
+  "repository": "ansible-role-nginx",
+  "source_sha256": "9f1ec3df01738755718adb51ceaeb3636284bf0bca1b2399c621aad542b814c3",
+  "status": "success",
+  "variables": {
+    "ansible_facts": {
+      "property": {
+        "distribution_major_version": {}
+      }
+    }
+  },
+  "variable_count": 1,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "b64encode",
+      "comment"
+    ],
+    "registered_framework_tests": [],
+    "registration_evidence": [
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64encode_filter.html",
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/comment_filter.html"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "dbefa6c900564fe367c5ca620b0f0605d54090276416b9dd5687110eda260d1e",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {},
+  "filter": {},
+  "jinja2_version": "3.1.6"
+}

@@ -1,0 +1,99 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\flaskbb\\02_form.html",
+  "relative_template_path": "web/flaskbb/02_form.html",
+  "scenario": "web",
+  "repository": "flaskbb",
+  "source_sha256": "39a7484d713c3db9288c12f9b9782d1d4b5ba6c96a54cdd49faaf6f3c81ae819",
+  "status": "success",
+  "variables": {},
+  "variable_count": 0,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "3e247aa5f142e000a2f00445317b00c7d0f6b2a1a2cee8afe8a7a32773fbca4d",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "macro": {
+      "node_type": "Macro",
+      "is_builtin": true,
+      "syntax": "{% macro name(args, kwargs=default) %}...{% endmacro %}",
+      "description": "Define a reusable template function that can accept arguments and return rendered output.",
+      "caveat": "Macros perform no type checking. Variables defined inside a macro are local. Recursive macros may cause stack overflows."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    },
+    "set": {
+      "node_type": "Assign",
+      "is_builtin": true,
+      "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+      "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+      "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {
+    "safe": {
+      "is_builtin": true,
+      "signature": "safe(value)",
+      "description": "Mark a string as safe HTML, disabling auto-escaping.",
+      "caveat": "Use only with trusted content; improper use can cause XSS vulnerabilities."
+    },
+    "length": {
+      "is_builtin": true,
+      "signature": "length(obj)",
+      "description": "Return the number of items in an object.",
+      "caveat": "Returns 0 for objects without a defined length."
+    },
+    "trim": {
+      "is_builtin": true,
+      "signature": "trim(value, chars=None)",
+      "description": "Strip characters from both ends of a string.",
+      "caveat": "Equivalent to Python's strip()."
+    }
+  },
+  "jinja2_version": "3.1.6"
+}

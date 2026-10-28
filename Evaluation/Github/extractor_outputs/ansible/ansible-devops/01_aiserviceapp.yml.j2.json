@@ -1,0 +1,104 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\ansible\\ansible-devops\\01_aiserviceapp.yml.j2",
+  "relative_template_path": "ansible/ansible-devops/01_aiserviceapp.yml.j2",
+  "scenario": "ansible",
+  "repository": "ansible-devops",
+  "source_sha256": "146d23c0005ff628c7b67a90e0107bac3c776c7e8103c0d00d3c2184a5c5549c",
+  "status": "success",
+  "variables": {
+    "aiservice_instance_id": {},
+    "aiservice_namespace": {},
+    "aiservice_operator_log_level": {},
+    "aiservice_certificate_issuer": {},
+    "aiservice_certificate_duration": {},
+    "aiservice_certificate_renew_before": {},
+    "drocfg": {
+      "property": {
+        "url": {},
+        "ca": {}
+      }
+    },
+    "jdbccfg": {
+      "property": {
+        "url": {},
+        "ca": {}
+      }
+    },
+    "aiservice_jdbc_secret": {},
+    "use_aws_db2": {},
+    "aiservice_s3_url": {},
+    "aiservice_s3_region": {},
+    "aiservice_s3_bucket_prefix": {},
+    "aiservice_s3_templates_bucket": {},
+    "aiservice_s3_tenants_bucket": {},
+    "aiservice_s3_secret": {},
+    "aiservice_domain": {},
+    "environment_type": {},
+    "aiservice_storage_class": {},
+    "aiservice_saas": {},
+    "mas_icr_cp": {},
+    "mas_icr_cpopen": {},
+    "aiservice_watsonxai_ca_crt": {},
+    "ocp_enable_ipv6": {}
+  },
+  "variable_count": 24,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "b64encode",
+      "comment"
+    ],
+    "registered_framework_tests": [],
+    "registration_evidence": [
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64encode_filter.html",
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/comment_filter.html"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "4ba60a161fba427cd62b9c15c1827dda0965e9842121722770f17387f31ae61a",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    }
+  },
+  "filter": {
+    "b64encode": {
+      "is_builtin": false
+    }
+  },
+  "jinja2_version": "3.1.6"
+}

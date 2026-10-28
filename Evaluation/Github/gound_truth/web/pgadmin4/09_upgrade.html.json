@@ -1,0 +1,10 @@
+{
+  "variables": {
+    "current_version": {},
+    "product_name": {},
+    "upgrade_version": {},
+    "download_url": {}
+  },
+  "tag": {},
+  "filter": {}
+}

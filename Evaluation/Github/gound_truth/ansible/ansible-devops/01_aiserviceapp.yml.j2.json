@@ -1,0 +1,52 @@
+{
+  "variables": {
+    "aiservice_instance_id": {},
+    "aiservice_namespace": {},
+    "aiservice_operator_log_level": {},
+    "aiservice_certificate_issuer": {},
+    "aiservice_certificate_duration": {},
+    "aiservice_certificate_renew_before": {},
+    "drocfg": {
+      "property": {
+        "url": {},
+        "ca": {}
+      }
+    },
+    "jdbccfg": {
+      "property": {
+        "url": {},
+        "ca": {}
+      }
+    },
+    "aiservice_jdbc_secret": {},
+    "use_aws_db2": {},
+    "aiservice_s3_url": {},
+    "aiservice_s3_region": {},
+    "aiservice_s3_bucket_prefix": {},
+    "aiservice_s3_templates_bucket": {},
+    "aiservice_s3_tenants_bucket": {},
+    "aiservice_s3_secret": {},
+    "aiservice_domain": {},
+    "environment_type": {},
+    "aiservice_storage_class": {},
+    "aiservice_saas": {},
+    "mas_icr_cp": {},
+    "mas_icr_cpopen": {},
+    "aiservice_watsonxai_ca_crt": {},
+    "ocp_enable_ipv6": {}
+  },
+  "tag": {
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    }
+  },
+  "filter": {
+    "b64encode": {
+      "is_builtin": false
+    }
+  }
+}

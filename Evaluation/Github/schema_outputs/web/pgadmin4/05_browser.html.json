@@ -1,0 +1,59 @@
+{
+  "tool": "jinja2schema",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\pgadmin4\\05_browser.html",
+  "relative_template_path": "web/pgadmin4/05_browser.html",
+  "scenario": "web",
+  "repository": "pgadmin4",
+  "source_sha256": "7f02a5fb421dcd22733e2c0860403f031163ab9ebef39a1bc84c68bcc1569b71",
+  "status": "inference_failure",
+  "variables": null,
+  "variable_count": null,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "972aab0f49fded9d4c8f02b67accae84716174ebd2e98f1feb36fc21accc2818",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": {
+    "phase": "inference",
+    "category": "unsupported_call_or_arguments",
+    "type": "InvalidExpression",
+    "message": "line 4: \"format\" call is not supported",
+    "line": 4,
+    "lines": [
+      4
+    ]
+  },
+  "jinja2_version": "3.1.6",
+  "tool_version": "0.1.4"
+}

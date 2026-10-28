@@ -1,0 +1,49 @@
+{
+  "variables": {
+    "item": {
+      "property": {
+        "server_name_redirect": {},
+        "listen": {},
+        "server_name": {},
+        "root": {},
+        "index": {},
+        "error_page": {},
+        "access_log": {},
+        "error_log": {},
+        "return": {},
+        "extra_parameters": {}
+      }
+    },
+    "nginx_listen_ipv6": {}
+  },
+  "tag": {
+    "block": {
+      "node_type": "Block",
+      "is_builtin": true,
+      "syntax": "{% block name scoped %}...{% endblock %}",
+      "description": "Define a named block that can be overridden by child templates during template inheritance.",
+      "caveat": "Block names must be unique within a template."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    }
+  },
+  "filter": {
+    "default": {
+      "is_builtin": true,
+      "signature": "default(value, default_value='', boolean=False)",
+      "description": "Return a default value if the original value is undefined.",
+      "caveat": "If boolean=True, only False triggers the default (not 0 or empty strings)."
+    },
+    "indent": {
+      "is_builtin": true,
+      "signature": "indent(s, width=4, first=False, blank=False)",
+      "description": "Indent each line in a multi-line string.",
+      "caveat": "Width may be an integer or a string."
+    }
+  }
+}

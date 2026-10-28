@@ -1,0 +1,51 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\dbt\\jaffle-shop\\05_stg_customers.sql",
+  "relative_template_path": "dbt/jaffle-shop/05_stg_customers.sql",
+  "scenario": "dbt",
+  "repository": "jaffle-shop",
+  "source_sha256": "22d867fe3931ae26c30c844add0ba3a2c5ffa1b5431f1b51bb943914f81e0308",
+  "status": "success",
+  "variables": {},
+  "variable_count": 0,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "414f7e7b0d3c526ab90f019e292c5b9335f787b0c6ad554a16850e26c958dc8a",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {},
+  "filter": {},
+  "jinja2_version": "3.1.6"
+}

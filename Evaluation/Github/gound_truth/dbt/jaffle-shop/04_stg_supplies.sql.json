@@ -1,0 +1,7 @@
+{
+  "variables": {
+    "dbt_utils": {}
+  },
+  "tag": {},
+  "filter": {}
+}

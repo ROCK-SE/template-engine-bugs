@@ -1,0 +1,59 @@
+{
+  "tool": "meta",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\dbt\\dbt-utils\\02_cardinality_equality.sql",
+  "relative_template_path": "dbt/dbt-utils/02_cardinality_equality.sql",
+  "scenario": "dbt",
+  "repository": "dbt-utils",
+  "source_sha256": "cf3d75fc1146de40f8be4b53767630c61ee352032928228366d3a27d4e64e286",
+  "status": "success",
+  "variables": {
+    "adapter": {},
+    "dbt": {},
+    "return": {}
+  },
+  "variable_count": 3,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [
+      {
+        "name": "test_cardinality_equality",
+        "line": 1
+      }
+    ],
+    "normalized_ast_sha256": "e95bc8bba39fe843d6572ec5b32e66c52564fd8dd553bd7bfabe45fe2f26907b",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "3.1.6"
+}

@@ -1,0 +1,59 @@
+{
+  "tool": "jinja2schema",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\dbt\\dbt-utils\\08_get_url_path.sql",
+  "relative_template_path": "dbt/dbt-utils/08_get_url_path.sql",
+  "scenario": "dbt",
+  "repository": "dbt-utils",
+  "source_sha256": "35f211710ed851e80f0222645cc2962c529d63eb5a42ba56888edf5f9f43a23e",
+  "status": "inference_failure",
+  "variables": null,
+  "variable_count": null,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "4ce7d7b8c0b9ff2c9d54e24e761a94b4eaf43eae2ecdb7ac5bf289ecbb6e087e",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": {
+    "phase": "inference",
+    "category": "unsupported_call_or_arguments",
+    "type": "InvalidExpression",
+    "message": "line 2: \"return\" call is not supported",
+    "line": 2,
+    "lines": [
+      2
+    ]
+  },
+  "jinja2_version": "3.1.6",
+  "tool_version": "0.1.4"
+}

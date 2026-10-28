@@ -1,0 +1,97 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\indico\\06_event_list.html",
+  "relative_template_path": "web/indico/06_event_list.html",
+  "scenario": "web",
+  "repository": "indico",
+  "source_sha256": "571170cdcc7871f8633eeb498040ac6f1753e92f6e176a95f0b1b8082a20dbb7",
+  "status": "success",
+  "variables": {
+    "ts": {},
+    "events_by_date": {
+      "type": "Iterable",
+      "property": {
+        "date": {},
+        "events": {
+          "type": "Iterable",
+          "property": {
+            "event": {
+              "property": {
+                "id": {},
+                "start_dt": {},
+                "category": {},
+                "url": {},
+                "title": {},
+                "room": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "variable_count": 2,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "format_date",
+      "format_skeleton",
+      "format_time"
+    ],
+    "registered_framework_tests": [
+      "subclassof"
+    ],
+    "registration_evidence": [
+      "tests/web/indico/indico/web/flask/app.py:233-238,261"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "d8560d3acef44a3a81b21ff7572ac3d8a77b3140aa4d47ccd2edbaf20c9cf5ed",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {
+    "format_date": {
+      "is_builtin": false
+    },
+    "format_time": {
+      "is_builtin": false
+    }
+  },
+  "jinja2_version": "3.1.6"
+}

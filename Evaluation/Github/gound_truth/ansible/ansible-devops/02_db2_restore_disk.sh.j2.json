@@ -1,0 +1,11 @@
+{
+  "variables": {
+    "db2_dbname": {},
+    "backup_type": {},
+    "db2_backup_version": {},
+    "db2_backup_timestamp": {},
+    "pod_full_backup_path": {}
+  },
+  "tag": {},
+  "filter": {}
+}

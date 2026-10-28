@@ -1,0 +1,29 @@
+{
+  "variables": {
+    "flaskbb_config": {
+      "property": {
+        "__getitem__()": {
+          "DEFAULT_LANGUAGE": {},
+          "PROJECT_TITLE": {}
+        }
+      }
+    }
+  },
+  "tag": {
+    "block": {
+      "node_type": "Block",
+      "is_builtin": true,
+      "syntax": "{% block name scoped %}...{% endblock %}",
+      "description": "Define a named block that can be overridden by child templates during template inheritance.",
+      "caveat": "Block names must be unique within a template."
+    }
+  },
+  "filter": {
+    "replace": {
+      "is_builtin": true,
+      "signature": "replace(s, old, new, count=None)",
+      "description": "Replace occurrences of a substring.",
+      "caveat": "Case-sensitive; regex is not supported."
+    }
+  }
+}

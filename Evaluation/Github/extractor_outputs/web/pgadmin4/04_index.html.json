@@ -1,0 +1,94 @@
+{
+  "tool": "extractor",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\pgadmin4\\04_index.html",
+  "relative_template_path": "web/pgadmin4/04_index.html",
+  "scenario": "web",
+  "repository": "pgadmin4",
+  "source_sha256": "da59727a8681d7faf4cd8f789341702acb73aef77fe110476e19f132f1bf0b9e",
+  "status": "success",
+  "variables": {
+    "title": {},
+    "csp_nonce": {},
+    "is_desktop_mode": {},
+    "is_linux": {},
+    "params": {}
+  },
+  "variable_count": 5,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [
+      {
+        "kind": "Extends",
+        "line": 1,
+        "template": "base.html",
+        "expression_type": "Const",
+        "action": "exclude_external_body"
+      }
+    ],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "a294e92f2162b2f147264d70aa3fb0d286546c6fcfeae6fd0485091cc255c36e",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "tag": {
+    "extends": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% extends template %}",
+      "description": "Declare template inheritance from a parent template. The child template may override blocks defined by the parent.",
+      "caveat": "The extends tag must appear before any output, except whitespace or comments."
+    },
+    "block": {
+      "node_type": "Block",
+      "is_builtin": true,
+      "syntax": "{% block name scoped %}...{% endblock %}",
+      "description": "Define a named block that can be overridden by child templates during template inheritance.",
+      "caveat": "Block names must be unique within a template."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    }
+  },
+  "filter": {
+    "safe": {
+      "is_builtin": true,
+      "signature": "safe(value)",
+      "description": "Mark a string as safe HTML, disabling auto-escaping.",
+      "caveat": "Use only with trusted content; improper use can cause XSS vulnerabilities."
+    }
+  },
+  "jinja2_version": "3.1.6"
+}

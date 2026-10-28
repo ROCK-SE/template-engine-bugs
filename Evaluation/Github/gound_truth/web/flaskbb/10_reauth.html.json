@@ -1,0 +1,49 @@
+{
+  "variables": {
+    "form": {
+      "property": {
+        "password": {},
+        "submit": {}
+      }
+    }
+  },
+  "tag": {
+    "extends": {
+      "node_type": "Extends",
+      "is_builtin": true,
+      "syntax": "{% extends template %}",
+      "description": "Declare template inheritance from a parent template. The child template may override blocks defined by the parent.",
+      "caveat": "The extends tag must appear before any output, except whitespace or comments."
+    },
+    "set": {
+      "node_type": "Assign",
+      "is_builtin": true,
+      "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+      "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+      "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+    },
+    "block": {
+      "node_type": "Block",
+      "is_builtin": true,
+      "syntax": "{% block name scoped %}...{% endblock %}",
+      "description": "Define a named block that can be overridden by child templates during template inheritance.",
+      "caveat": "Block names must be unique within a template."
+    },
+    "from": {
+      "node_type": "FromImport",
+      "is_builtin": true,
+      "syntax": "{% from template import name1, name2 as alias with context %}",
+      "description": "Import specific macros or variables from another template into the current namespace.",
+      "caveat": "Only explicitly imported names are available. Aliases should not shadow existing variables."
+    },
+    "trans": {
+      "node_type": "SourceTag",
+      "is_builtin": true,
+      "syntax": "{% trans bindings %}...{% pluralize %}...{% endtrans %}",
+      "description": "Mark text for translation using Jinja's i18n extension.",
+      "extension": "jinja2.ext.i18n",
+      "caveat": "Source extraction preserves this tag after i18n AST lowering."
+    }
+  },
+  "filter": {}
+}

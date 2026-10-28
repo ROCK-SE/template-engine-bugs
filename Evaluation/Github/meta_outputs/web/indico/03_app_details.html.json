@@ -1,0 +1,87 @@
+{
+  "tool": "meta",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\indico\\03_app_details.html",
+  "relative_template_path": "web/indico/03_app_details.html",
+  "scenario": "web",
+  "repository": "indico",
+  "source_sha256": "04c2f62c81dee470a24fbe2140e85239934894c12e9f885c518a6b6023ebe536",
+  "status": "success",
+  "variables": {
+    "application": {},
+    "clipboard_text": {},
+    "disabled_fields": {},
+    "form": {},
+    "form_footer": {},
+    "form_header": {},
+    "form_rows": {},
+    "indico_config": {},
+    "message_box": {},
+    "num_users": {},
+    "url_for": {}
+  },
+  "variable_count": 11,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "format_date",
+      "format_skeleton",
+      "format_time"
+    ],
+    "registered_framework_tests": [
+      "subclassof"
+    ],
+    "registration_evidence": [
+      "tests/web/indico/indico/web/flask/app.py:233-238,261"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [
+      {
+        "kind": "Extends",
+        "line": 1,
+        "template": "oauth/apps_base.html",
+        "expression_type": "Const",
+        "action": "exclude_external_body"
+      }
+    ],
+    "imports_retained": [
+      {
+        "kind": "FromImport",
+        "line": 3
+      },
+      {
+        "kind": "FromImport",
+        "line": 4
+      }
+    ],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "949a49e5c44c197f99665738dfa91139c5fdf88c11c7cb731b327247958f7646",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "3.1.6"
+}

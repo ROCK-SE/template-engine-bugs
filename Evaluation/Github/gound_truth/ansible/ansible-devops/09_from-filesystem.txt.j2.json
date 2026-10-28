@@ -1,0 +1,27 @@
+{
+  "variables": {
+    "extra_images": {
+      "type": "Iterable",
+      "property": {
+        "image": {
+          "property": {
+            "name": {},
+            "digest": {},
+            "tag": {}
+          }
+        }
+      }
+    },
+    "registry_public_url_with_path": {}
+  },
+  "tag": {
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {}
+}

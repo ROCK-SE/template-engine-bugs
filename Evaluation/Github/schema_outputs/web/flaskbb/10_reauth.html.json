@@ -1,0 +1,72 @@
+{
+  "tool": "jinja2schema",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\flaskbb\\10_reauth.html",
+  "relative_template_path": "web/flaskbb/10_reauth.html",
+  "scenario": "web",
+  "repository": "flaskbb",
+  "source_sha256": "040990b4147ccd4d29d9bc5f8866adce112cdb0a894b2e68e5420dc1568f6421",
+  "status": "inference_failure",
+  "variables": null,
+  "variable_count": null,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [
+      {
+        "kind": "Extends",
+        "line": 1,
+        "template": null,
+        "expression_type": "Call",
+        "action": "retain_template_name_expression"
+      }
+    ],
+    "imports_retained": [
+      {
+        "kind": "FromImport",
+        "line": 5
+      }
+    ],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "7936e46e3e213824bf052fd7180eba7bbf9fc89aaab17886befaf90a2494eccd",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": {
+    "phase": "inference",
+    "category": "unsupported_call_or_arguments",
+    "type": "InvalidExpression",
+    "message": "line 1: \"theme\" call is not supported",
+    "line": 1,
+    "lines": [
+      1
+    ]
+  },
+  "jinja2_version": "3.1.6",
+  "tool_version": "0.1.4"
+}

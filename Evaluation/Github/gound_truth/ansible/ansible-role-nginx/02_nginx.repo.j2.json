@@ -1,0 +1,11 @@
+{
+  "variables": {
+    "ansible_facts": {
+      "property": {
+        "distribution_major_version": {}
+      }
+    }
+  },
+  "tag": {},
+  "filter": {}
+}

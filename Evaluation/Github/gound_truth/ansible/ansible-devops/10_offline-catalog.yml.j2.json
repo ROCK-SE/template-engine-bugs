@@ -1,0 +1,12 @@
+{
+  "variables": {
+    "mas_catalog_version": {},
+    "mas_catalog_metadata": {
+      "property": {
+        "catalog_digest": {}
+      }
+    }
+  },
+  "tag": {},
+  "filter": {}
+}

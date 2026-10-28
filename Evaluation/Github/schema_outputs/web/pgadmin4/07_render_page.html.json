@@ -1,0 +1,67 @@
+{
+  "tool": "jinja2schema",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\web\\pgadmin4\\07_render_page.html",
+  "relative_template_path": "web/pgadmin4/07_render_page.html",
+  "scenario": "web",
+  "repository": "pgadmin4",
+  "source_sha256": "bdec566af4efc2e2b4fdec2fcc82767b404c19cc47b4d4bbf39c9daa8fffbe79",
+  "status": "inference_failure",
+  "variables": null,
+  "variable_count": null,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [],
+    "registered_framework_tests": [],
+    "registration_evidence": [],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [
+      {
+        "kind": "Extends",
+        "line": 1,
+        "template": "base.html",
+        "expression_type": "Const",
+        "action": "exclude_external_body"
+      }
+    ],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "2c22a82a50012d7a276a9f076aee54da788f42d80e8b6536ec91e4ef07492519",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": {
+    "phase": "inference",
+    "category": "unsupported_call_or_arguments",
+    "type": "InvalidExpression",
+    "message": "line 4: \"get_flashed_messages\" call is not supported",
+    "line": 4,
+    "lines": [
+      4
+    ]
+  },
+  "jinja2_version": "3.1.6",
+  "tool_version": "0.1.4"
+}

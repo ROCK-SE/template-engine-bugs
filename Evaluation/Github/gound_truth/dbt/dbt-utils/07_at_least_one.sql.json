@@ -1,0 +1,56 @@
+{
+  "variables": {
+    "adapter": {}
+  },
+  "tag": {
+    "test": {
+      "node_type": "Macro",
+      "is_builtin": false,
+      "origin": "dbt",
+      "syntax": "{% test name(args) %}...{% endtest %}",
+      "description": "Define a dbt generic data test with local parameters."
+    },
+    "macro": {
+      "node_type": "Macro",
+      "is_builtin": true,
+      "syntax": "{% macro name(args, kwargs=default) %}...{% endmacro %}",
+      "description": "Define a reusable template function that can accept arguments and return rendered output.",
+      "caveat": "Macros perform no type checking. Variables defined inside a macro are local. Recursive macros may cause stack overflows."
+    },
+    "set": {
+      "node_type": "Assign",
+      "is_builtin": true,
+      "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+      "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+      "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    },
+    "do": {
+      "node_type": "ExprStmt",
+      "is_builtin": true,
+      "syntax": "{% do expression %}",
+      "description": "Evaluate an expression for its side effects without rendering its result.",
+      "caveat": "The result is discarded. To display a value, use {{ }} instead."
+    }
+  },
+  "filter": {
+    "length": {
+      "is_builtin": true,
+      "signature": "length(obj)",
+      "description": "Return the number of items in an object.",
+      "caveat": "Returns 0 for objects without a defined length."
+    },
+    "join": {
+      "is_builtin": true,
+      "signature": "join(value, d='', attribute=None)",
+      "description": "Join items into a string using a delimiter.",
+      "caveat": "All items must be string-convertible."
+    }
+  }
+}

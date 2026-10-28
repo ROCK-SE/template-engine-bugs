@@ -1,0 +1,63 @@
+{
+  "variables": {
+    "input_args": {},
+    "field": {
+      "property": {
+        "disabled_choices_reasons": {},
+        "subfield": {
+          "property": {
+            "data": {},
+            "label": {}
+          }
+        },
+        "disabled_choices": {}
+      },
+      "type": "Iterable"
+    }
+  },
+  "tag": {
+    "extends": {
+      "node_type": "Extends",
+      "is_builtin": true,
+      "syntax": "{% extends template %}",
+      "description": "Declare template inheritance from a parent template. The child template may override blocks defined by the parent.",
+      "caveat": "The extends tag must appear before any output, except whitespace or comments."
+    },
+    "block": {
+      "node_type": "Block",
+      "is_builtin": true,
+      "syntax": "{% block name scoped %}...{% endblock %}",
+      "description": "Define a named block that can be overridden by child templates during template inheritance.",
+      "caveat": "Block names must be unique within a template."
+    },
+    "set": {
+      "node_type": "Assign",
+      "is_builtin": true,
+      "syntax": "{% set name = value %} | {% set name %}...{% endset %}",
+      "description": "Assign a value to a variable within the template. Supports both single-line assignment and block assignment.",
+      "caveat": "Assignments are scoped to the current context. Block assignments capture rendered text, not expressions."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    }
+  },
+  "filter": {
+    "default": {
+      "is_builtin": true,
+      "signature": "default(value, default_value='', boolean=False)",
+      "description": "Return a default value if the original value is undefined.",
+      "caveat": "If boolean=True, only False triggers the default (not 0 or empty strings)."
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "variables": {
+    "nginx_user": {},
+    "nginx_error_log": {},
+    "nginx_pidfile": {},
+    "nginx_worker_processes": {},
+    "nginx_extra_conf_options": {},
+    "nginx_worker_connections": {},
+    "nginx_multi_accept": {},
+    "nginx_mime_file_path": {},
+    "nginx_server_names_hash_bucket_size": {},
+    "nginx_client_max_body_size": {},
+    "nginx_log_format": {},
+    "nginx_access_log": {},
+    "nginx_sendfile": {},
+    "nginx_tcp_nopush": {},
+    "nginx_tcp_nodelay": {},
+    "nginx_keepalive_timeout": {},
+    "nginx_keepalive_requests": {},
+    "nginx_server_tokens": {},
+    "nginx_proxy_cache_path": {},
+    "nginx_extra_http_options": {},
+    "nginx_upstreams": {
+      "type": "Iterable",
+      "property": {
+        "upstream": {
+          "property": {
+            "name": {},
+            "strategy": {},
+            "servers": {
+              "type": "Iterable",
+              "property": {
+                "server": {}
+              }
+            },
+            "keepalive": {}
+          }
+        }
+      }
+    },
+    "nginx_conf_path": {},
+    "nginx_vhost_path": {}
+  },
+  "tag": {
+    "block": {
+      "node_type": "Block",
+      "is_builtin": true,
+      "syntax": "{% block name scoped %}...{% endblock %}",
+      "description": "Define a named block that can be overridden by child templates during template inheritance.",
+      "caveat": "Block names must be unique within a template."
+    },
+    "if": {
+      "node_type": "If",
+      "is_builtin": true,
+      "syntax": "{% if condition %}...{% elif condition %}...{% else %}...{% endif %}",
+      "description": "Conditionally render blocks based on the truth value of expressions.",
+      "caveat": "Conditions follow Python truthiness rules: empty sequences, empty strings, None, and 0 evaluate to False."
+    },
+    "for": {
+      "node_type": "For",
+      "is_builtin": true,
+      "syntax": "{% for target in iterable %}...{% else %}...{% endfor %}",
+      "description": "Iterate over an iterable (such as a list, tuple, or dict) and render the block for each item.",
+      "caveat": "Loop variables are only available inside the loop body."
+    }
+  },
+  "filter": {
+    "indent": {
+      "is_builtin": true,
+      "signature": "indent(s, width=4, first=False, blank=False)",
+      "description": "Indent each line in a multi-line string.",
+      "caveat": "Width may be an integer or a string."
+    }
+  }
+}

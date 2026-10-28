@@ -1,0 +1,22 @@
+{
+  "variables": {
+    "adapter": {}
+  },
+  "tag": {
+    "test": {
+      "node_type": "Macro",
+      "is_builtin": false,
+      "origin": "dbt",
+      "syntax": "{% test name(args) %}...{% endtest %}",
+      "description": "Define a dbt generic data test with local parameters."
+    },
+    "macro": {
+      "node_type": "Macro",
+      "is_builtin": true,
+      "syntax": "{% macro name(args, kwargs=default) %}...{% endmacro %}",
+      "description": "Define a reusable template function that can accept arguments and return rendered output.",
+      "caveat": "Macros perform no type checking. Variables defined inside a macro are local. Recursive macros may cause stack overflows."
+    }
+  },
+  "filter": {}
+}

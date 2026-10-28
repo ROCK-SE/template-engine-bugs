@@ -1,0 +1,80 @@
+{
+  "tool": "meta",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\ansible\\ansible-role-nginx\\03_nginx.conf.j2",
+  "relative_template_path": "ansible/ansible-role-nginx/03_nginx.conf.j2",
+  "scenario": "ansible",
+  "repository": "ansible-role-nginx",
+  "source_sha256": "631f503743fbc02fe31613f88a21b8f480aa49a66698f136f0e3efbfbccebb4a",
+  "status": "success",
+  "variables": {
+    "nginx_access_log": {},
+    "nginx_client_max_body_size": {},
+    "nginx_conf_path": {},
+    "nginx_error_log": {},
+    "nginx_extra_conf_options": {},
+    "nginx_extra_http_options": {},
+    "nginx_keepalive_requests": {},
+    "nginx_keepalive_timeout": {},
+    "nginx_log_format": {},
+    "nginx_mime_file_path": {},
+    "nginx_multi_accept": {},
+    "nginx_pidfile": {},
+    "nginx_proxy_cache_path": {},
+    "nginx_sendfile": {},
+    "nginx_server_names_hash_bucket_size": {},
+    "nginx_server_tokens": {},
+    "nginx_tcp_nodelay": {},
+    "nginx_tcp_nopush": {},
+    "nginx_upstreams": {},
+    "nginx_user": {},
+    "nginx_vhost_path": {},
+    "nginx_worker_connections": {},
+    "nginx_worker_processes": {}
+  },
+  "variable_count": 23,
+  "json_schema": null,
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "b64encode",
+      "comment"
+    ],
+    "registered_framework_tests": [],
+    "registration_evidence": [
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64encode_filter.html",
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/comment_filter.html"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "46972001041faa45869e23c796cf486fb1f1e52a530269a26105783e4b7c36dd",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "3.1.6"
+}

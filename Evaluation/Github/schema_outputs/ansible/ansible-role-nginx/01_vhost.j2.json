@@ -1,0 +1,383 @@
+{
+  "tool": "jinja2schema",
+  "environment_profile": "framework-single-file-v1",
+  "template_path": "D:\\template_engine_rebuttle\\sample_template\\ansible\\ansible-role-nginx\\01_vhost.j2",
+  "relative_template_path": "ansible/ansible-role-nginx/01_vhost.j2",
+  "scenario": "ansible",
+  "repository": "ansible-role-nginx",
+  "source_sha256": "f3b5d5bd0e3ecd48c933ae89073066163999ce98101b7bebf7b5873b83359421",
+  "status": "success",
+  "variables": {
+    "item": {
+      "title": "item",
+      "type": "object",
+      "properties": {
+        "error_page": {
+          "title": "error_page",
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "access_log": {
+          "title": "access_log",
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "root": {
+          "title": "root",
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "server_name_redirect": {
+          "title": "server_name_redirect",
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "listen": {
+          "title": "listen",
+          "default": "80",
+          "type": "string"
+        },
+        "return": {
+          "title": "return",
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "index": {
+          "title": "index",
+          "default": "index.html index.htm",
+          "type": "string"
+        },
+        "error_log": {
+          "title": "error_log",
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "extra_parameters": {
+          "title": "extra_parameters",
+          "type": "string"
+        },
+        "server_name": {
+          "title": "server_name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "error_page",
+        "access_log",
+        "root",
+        "server_name_redirect",
+        "return",
+        "error_log",
+        "extra_parameters",
+        "server_name"
+      ]
+    },
+    "nginx_listen_ipv6": {
+      "title": "nginx_listen_ipv6",
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "array"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "variable_count": 2,
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "nginx_listen_ipv6": {
+        "title": "nginx_listen_ipv6",
+        "anyOf": [
+          {
+            "type": "object"
+          },
+          {
+            "type": "array"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "item": {
+        "title": "item",
+        "type": "object",
+        "properties": {
+          "error_page": {
+            "title": "error_page",
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "access_log": {
+            "title": "access_log",
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "root": {
+            "title": "root",
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "server_name_redirect": {
+            "title": "server_name_redirect",
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "listen": {
+            "title": "listen",
+            "default": "80",
+            "type": "string"
+          },
+          "return": {
+            "title": "return",
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "index": {
+            "title": "index",
+            "default": "index.html index.htm",
+            "type": "string"
+          },
+          "error_log": {
+            "title": "error_log",
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "extra_parameters": {
+            "title": "extra_parameters",
+            "type": "string"
+          },
+          "server_name": {
+            "title": "server_name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "error_page",
+          "access_log",
+          "root",
+          "server_name_redirect",
+          "return",
+          "error_log",
+          "extra_parameters",
+          "server_name"
+        ]
+      }
+    },
+    "required": [
+      "nginx_listen_ipv6",
+      "item"
+    ]
+  },
+  "frontend": {
+    "profile": "framework-single-file-v1",
+    "extensions": [
+      "framework_frontend.DbtTestExtension",
+      "jinja2.ext.ExprStmtExtension",
+      "jinja2.ext.InternationalizationExtension",
+      "jinja2.ext.LoopControlExtension"
+    ],
+    "registered_framework_filters": [
+      "b64encode",
+      "comment"
+    ],
+    "registered_framework_tests": [],
+    "registration_evidence": [
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/b64encode_filter.html",
+      "https://docs.ansible.com/ansible/latest/collections/ansible/builtin/comment_filter.html"
+    ],
+    "callable_globals_added": [],
+    "environment_global_names": [
+      "_",
+      "cycler",
+      "dict",
+      "gettext",
+      "joiner",
+      "lipsum",
+      "namespace",
+      "ngettext",
+      "npgettext",
+      "pgettext",
+      "range"
+    ],
+    "placeholder_policy": "Compile-only declarations; no execution or return-type assumptions.",
+    "analysis_unit": "single_source_file",
+    "dependency_projection": [],
+    "imports_retained": [],
+    "dbt_test_blocks_lowered": [],
+    "normalized_ast_sha256": "385f5e294b6b2068fbd4e5057ce87d2ee5e7727cb434a76119ff91dd865e1fa7",
+    "typing_scope": "Evaluate names, attribute paths and collections; dependency-name projection does not claim scalar type equivalence.",
+    "placeholder_executions": 0
+  },
+  "error": null,
+  "jinja2_version": "3.1.6",
+  "tool_version": "0.1.4"
+}
